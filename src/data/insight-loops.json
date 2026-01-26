@@ -1,0 +1,521 @@
+{
+    "loops": [
+        {
+            "id": "adtech-mastery",
+            "title": "AdTech Architecture & Strategy",
+            "concept": "Advanced Programmatic Scenarios",
+            "primer": "This module tests your ability to apply architectural knowledge to real-world ad tech problems. You will face scenarios involving yield management, privacy compliance, and supply path optimization.",
+            "questions": [
+                {
+                    "id": "q1",
+                    "type": "scenario",
+                    "scenario": "A publisher notices high latency on their page load (3s+) purely due to ad tags. They are currently using client-side Header Bidding with 15 adapters.",
+                    "question": "What is the most effective architectural change to reduce latency while maintaining demand pressure?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Switch to Server-Side Header Bidding (Prebid Server)",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Remove all header bidding and rely on Google AdSense",
+                            "errorType": "Revenue Risk"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Add 5 more adapters to increase competition",
+                            "errorType": "Latency Blindness"
+                        },
+                        {
+                            "id": "o4",
+                            "text": "Set the timeout to 5000ms",
+                            "errorType": "UX degradation"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "Why does this solve the latency issue?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "It moves the 15 concurrent auctions to a server, requiring only one request from the browser."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Server-side connections represent higher CPMs than client-side."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "It forces bidders to bid faster or be dropped immediately."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q2",
+                    "type": "scenario",
+                    "scenario": "An advertiser is buying inventory via Open Auction. They notice they are winning 90% of bids at $2.00 CPM in a First-Price Auction environment.",
+                    "question": "What does this high win rate likely indicate?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "They are overbidding significantly above the market price.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "They have found a secret premium inventory source.",
+                            "errorType": "Optimism Bias"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "The floor price is exactly $2.00.",
+                            "errorType": "Correlation Error"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "What is the correct strategic adjustment?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "Implement bid shading or lower the bid to test the price floor."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Keep bidding $2.00 to maintain the relationship."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "Switch to a Second-Price auction immediately."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q3",
+                    "type": "scenario",
+                    "scenario": "You are investigating a discrepancy where your DSP reports 1,000,000 impressions, but the Publisher's SSP reports only 800,000.",
+                    "question": "Which of the following is the most common technical cause for this specific drop-off?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Creative heaviness causing slow rendering (latency drop-off).",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "The DSP is fraudulent.",
+                            "errorType": "Trust Gap"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "The SSP counts requests, not impressions.",
+                            "errorType": "Metric Confusion"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "How does creative weight cause this?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "The user closes the page or scrolls away before the heavy ad finishes rendering the tracking pixel."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Heavy ads are blocked by ad blockers more frequently."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "The SSP rejects files larger than 150KB."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q4",
+                    "type": "scenario",
+                    "scenario": "A brand wants to target users who visited their shoe website 3 days ago. Third-party cookies are blocked on Safari and Firefox.",
+                    "question": "Which targeting method is viable for this retargeting goal on the open web?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Universal ID solutions (e.g., UID2, RampID) or First-Party Data matching.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Standard Third-Party Cookie Syncing.",
+                            "errorType": "Legacy Thinking"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Contextual Targeting based on 'Shoe' keywords.",
+                            "errorType": "Wrong Goal"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "Why is Contextual Targeting not the correct answer here?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "Contextual targets the content (e.g., articles about running), not the specific user who visited the site."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Contextual targeting is illegal under GDPR."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "Contextual targeting requires cookies to work."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q5",
+                    "type": "scenario",
+                    "scenario": "You are implementing ads.txt. A unauthorized reseller is selling your inventory on an exchange, but you don't have a direct contract with them.",
+                    "question": "What entries should be in your ads.txt file regarding this reseller?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Do not include an entry for them.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Include them as 'RESELLER' to capture the revenue.",
+                            "errorType": "Authorization Risk"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Include them as 'DIRECT' since they are selling your site.",
+                            "errorType": "False Declaration"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "What happens if you exclude them?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "DSPs adhering to strict ads.txt checks will stop buying from that unauthorized path."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "The exchange will sue you for lost revenue."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "Your site will go offline."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q6",
+                    "type": "scenario",
+                    "scenario": "An SPO (Supply Path Optimization) team finds the same impression available via 4 different exchanges. Exchange A has a 15% take rate, Exchange B has 20%, C has 10%, D has 12%. All technical performance is equal.",
+                    "question": "Which path maximizes working media for the advertiser?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Exchange C (10%)",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Exchange B (20%)",
+                            "errorType": "Premium Fallacy"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Split evenly across all four.",
+                            "errorType": "Inefficiency"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "Why is 'working media' maximized here?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "Lower take rate means more of the advertiser's dollar reaches the publisher, often resulting in higher bid priority."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Cheaper exchanges always have better quality traffic."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "Exchange C likely creates the ad creative."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q7",
+                    "type": "scenario",
+                    "scenario": "A mobile app publisher sees decent fill rates but very low CPMs. They currently refresh ads every 10 seconds.",
+                    "question": "How might the refresh rate be affecting their CPM?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "High refresh decreases viewability/CTR, causing DSPs to lower bid values.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "It increases CPM because there is more supply.",
+                            "errorType": "Supply/Demand Error"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Refresh rate has no impact on CPM.",
+                            "errorType": "Technical Ignorance"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "What is the recommended fix?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "Increase refresh interval to 30s+ or bind refresh to user activity/viewability."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "Decrease refresh to 5 seconds to show even more ads."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "Switch to banner ads only."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q8",
+                    "type": "scenario",
+                    "scenario": "During a programmatic guaranteed deal negotiation, the buyer insists on using their own 3rd party verification tag wrapped around the creative.",
+                    "question": "Why might a publisher push back on this?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "It introduces latency and potential data leakage/security risks.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Publishers prefer not to be verified.",
+                            "errorType": "Cynicism"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Tags make the ad invisible.",
+                            "errorType": "Logic Error"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "How does 'wrapping' affect the page?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "The ad container must load the wrapper, which then calls another server for the ad, doubling the network hops."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "It changes the color of the ad."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "It requires the user to login."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q9",
+                    "type": "scenario",
+                    "scenario": "A user in France clicks 'Reject All' on the CMP (Consent Management Platform). The publisher is using TCF v2.0.",
+                    "question": "Can you serve a personalized Google AdSense ad to this user?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "No, absolutely not.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Yes, as long as it's not retargeting.",
+                            "errorType": "GDPR Misunderstanding"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Yes, Legitimate Interest overrides rejection.",
+                            "errorType": "Legal Risk"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "What signal is passed in the bid stream?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "The TC String indicates purpose consent denial; Google and other major vendors will block personalization."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "A 'Do Not Track' header is sent."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "The request is simply not sent to the SSP."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q10",
+                    "type": "scenario",
+                    "scenario": "You are buying CTV (Connected TV) inventory. You want to ensure your ad doesn't play back-to-back with a competitor's ad in the same commercial break.",
+                    "question": "What feature should you look for in the bid request?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Ad Podding / Competitive Separation support.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "High Bitrate enforcement.",
+                            "errorType": "Technical Detail"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "VPAID support.",
+                            "errorType": "Feature Confusion"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "How does Podding solve this?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "It structures the break into slots and allows the publisher/SSP to apply category exclusivity rules within that group."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "It forces the user to watch the ads."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "It makes the ads shorter."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q11",
+                    "type": "scenario",
+                    "scenario": "An advertiser wants to measure 'Brand Lift' rather than just clicks. They are running a video campaign.",
+                    "question": "What is the appropriate measurement methodology?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Control vs Exposed surveys.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "Last-click attribution.",
+                            "errorType": "Wrong KPI"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "Viewability tracking.",
+                            "errorType": "Metric Confusion"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "What does this measure?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "The difference in brand awareness/intent between people who saw the ad and those who didn't."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "How many seconds the video played."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "The cost per view."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                },
+                {
+                    "id": "q12",
+                    "type": "scenario",
+                    "scenario": "You are analyzing a PMP (Private Marketplace) Deal that is not spending. The DSP shows 'Winning' but the SSP shows 'Bid rate low'.",
+                    "question": "What is a likely setup error?",
+                    "options": [
+                        {
+                            "id": "o1",
+                            "text": "Deal ID mismatch or Seat ID block.",
+                            "errorType": "None"
+                        },
+                        {
+                            "id": "o2",
+                            "text": "The creative is too beautiful.",
+                            "errorType": "Irrelevant"
+                        },
+                        {
+                            "id": "o3",
+                            "text": "The floor price is too low.",
+                            "errorType": "Logic Inverse"
+                        }
+                    ],
+                    "correctOptionId": "o1",
+                    "reasoningStep": {
+                        "prompt": "Why does Seat ID matter?",
+                        "options": [
+                            {
+                                "id": "r1",
+                                "text": "If the specific buyer Seat isn't whitelisted on the SSP deal, the bid response is filtered out before the auction logic runs."
+                            },
+                            {
+                                "id": "r2",
+                                "text": "It determines the currency of the bid."
+                            },
+                            {
+                                "id": "r3",
+                                "text": "It defines the ad size."
+                            }
+                        ],
+                        "correctReasonId": "r1"
+                    }
+                }
+            ]
+        }
+    ]
+}

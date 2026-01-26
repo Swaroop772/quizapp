@@ -1,0 +1,23 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Score {
+  id             Int      @id @default(autoincrement())
+  name           String
+  score          Int
+  totalQuestions Int
+  timeUsed       Int      // in seconds
+  percentage     Int
+  createdAt      DateTime @default(now())
+  
+  @@index([percentage, timeUsed])
+  @@index([createdAt])
+}

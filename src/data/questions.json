@@ -1,0 +1,1186 @@
+{
+  "chapters": [
+    {
+      "id": "basics",
+      "title": "1. Basics",
+      "description": "Core concepts, terminology, and inventory basics.",
+      "questions": [
+        {
+          "id": 4,
+          "type": "MCQ",
+          "question": "Which pricing model pays per 1,000 impressions?",
+          "options": [
+            "CPC",
+            "CPA",
+            "CPM",
+            "CPI"
+          ],
+          "correctAnswer": "CPM",
+          "explanation": "CPM (Cost Per Mille) refers to the cost per 1,000 impressions. 'Mille' is Latin for one thousand."
+        },
+        {
+          "id": 5,
+          "type": "MCQ",
+          "question": "Difference between Ad Slot and Ad Space?",
+          "options": [
+            "Same thing",
+            "Slot is container, Space is creative area",
+            "Slot is video, Space is image",
+            "Space is container, Slot is content"
+          ],
+          "correctAnswer": "Slot is container, Space is creative area",
+          "explanation": "The Ad Slot is the specific space reserved on a website (container), while Ad Space is the actual area inside it displaying the ad."
+        },
+        {
+          "id": 31,
+          "type": "MCQ",
+          "question": "What does 'CPA' stand for?",
+          "options": [
+            "Cost Per Ad",
+            "Cost Per Action",
+            "Campaign Performance Analysis",
+            "Creative Platform Access"
+          ],
+          "correctAnswer": "Cost Per Action",
+          "explanation": "Cost Per Action (CPA) is a pricing model where the advertiser pays only when a user completes a specific action like a purchase or sign-up."
+        },
+        {
+          "id": 50,
+          "type": "MCQ",
+          "question": "What is an 'Ad Network'?",
+          "options": [
+            "Internet connection for ads",
+            "Platform aggregating publisher inventory for advertisers",
+            "Social network for advertisers",
+            "Ad design software"
+          ],
+          "correctAnswer": "Platform aggregating publisher inventory for advertisers",
+          "explanation": "An ad network aggregates unsold publisher inventory and offers advertisers a consolidated pool of impressions, typically on a CPM basis."
+        },
+        {
+          "id": 53,
+          "type": "MCQ",
+          "question": "What is an 'Insertion Order'?",
+          "options": [
+            "Database query",
+            "Agreement between advertiser and publisher",
+            "Ad placement sequence",
+            "Creative upload order"
+          ],
+          "correctAnswer": "Agreement between advertiser and publisher",
+          "explanation": "An Insertion Order is a formal agreement between an advertiser and publisher that specifies the terms of an ad campaign."
+        },
+        {
+          "id": 101,
+          "type": "MCQ",
+          "question": "What is 'Fill Rate'?",
+          "options": [
+            "Speed of ad loading",
+            "Percentage of ad requests that are filled with an ad",
+            "Cost of filling an ad slot",
+            "Volume of traffic"
+          ],
+          "correctAnswer": "Percentage of ad requests that are filled with an ad",
+          "explanation": "Fill Rate is a metric that calculates the percentage of ad requests that are successfully filled with an ad (Impressions / Ad Requests)."
+        },
+        {
+          "id": 102,
+          "type": "MCQ",
+          "question": "What is 'eCPM'?",
+          "options": [
+            "Estimated CPM",
+            "Effective Cost Per Mille",
+            "Electronic CPM",
+            "Exclusive CPM"
+          ],
+          "correctAnswer": "Effective Cost Per Mille",
+          "explanation": "eCPM (Effective Cost Per Mille) calculates the revenue generated per 1,000 impressions, regardless of the buying model (CPC, CPA, etc.)."
+        },
+        {
+          "id": 103,
+          "type": "MCQ",
+          "question": "What is 'CTR'?",
+          "options": [
+            "Cost To Run",
+            "Click Through Rate",
+            "Customer Tracking Record",
+            "Campaign Target Reach"
+          ],
+          "correctAnswer": "Click Through Rate",
+          "explanation": "CTR (Click Through Rate) is the ratio of users who click on a specific link to the number of total users who view an advertisement."
+        },
+        {
+          "id": 104,
+          "type": "MCQ",
+          "question": "What comprises the 'Ad Tech Stack'?",
+          "options": [
+            "Only Ad Servers",
+            "Only DSPs and SSPs",
+            "Collection of software used to manage digital advertising",
+            "Physical servers"
+          ],
+          "correctAnswer": "Collection of software used to manage digital advertising",
+          "explanation": "The Ad Tech Stack refers to the collection of software and tools (DSPs, SSPs, DMPs, Ad Servers) used to manage, run, and optimize digital advertising campaigns."
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "2. Technology",
+      "description": "DSPs, SSPs, and the tech stack components.",
+      "questions": [
+        {
+          "id": 1,
+          "type": "MCQ",
+          "question": "What does DSP stand for?",
+          "options": [
+            "Digital Service Provider",
+            "Demand-Side Platform",
+            "Data-Side Platform",
+            "Dynamic Serving Protocol"
+          ],
+          "correctAnswer": "Demand-Side Platform",
+          "explanation": "A Demand-Side Platform (DSP) allows media buyers to run advertising campaigns and buy inventory from various ad exchanges through a single interface."
+        },
+        {
+          "id": 2,
+          "type": "MCQ",
+          "question": "What is the primary function of an SSP?",
+          "options": [
+            "To buy ad space for advertisers",
+            "To manage and sell publisher ad inventory",
+            "To design creative ad banners",
+            "To track user behavior"
+          ],
+          "correctAnswer": "To manage and sell publisher ad inventory",
+          "explanation": "An SSP allows publishers to manage, sell, and optimize their ad inventory by connecting to ad exchanges and DSPs."
+        },
+        {
+          "id": 10,
+          "type": "MCQ",
+          "question": "Who uses an SSP?",
+          "options": [
+            "Advertisers",
+            "Publishers",
+            "Users",
+            "Agencies"
+          ],
+          "correctAnswer": "Publishers",
+          "explanation": "Publishers use Supply-Side Platforms (SSPs) to manage and sell their ad inventory."
+        },
+        {
+          "id": 21,
+          "type": "MCQ",
+          "question": "What does IAB stand for?",
+          "options": [
+            "Internet Advertising Bureau",
+            "Interactive Advertising Bureau",
+            "International Ad Board",
+            "Inventory Allocation Base"
+          ],
+          "correctAnswer": "Interactive Advertising Bureau",
+          "explanation": "The Interactive Advertising Bureau (IAB) is responsible for developing technical standards and promoting best practices in digital advertising."
+        },
+        {
+          "id": 24,
+          "type": "MCQ",
+          "question": "What does ATD stand for?",
+          "options": [
+            "Ad Tech Database",
+            "Agency Trading Desk",
+            "Automated Traffic Distribution",
+            "Advanced Targeting Data"
+          ],
+          "correctAnswer": "Agency Trading Desk",
+          "explanation": "An Agency Trading Desk (ATD) is a unit within an advertising agency that provides programmatic managed services to brands."
+        },
+        {
+          "id": 201,
+          "type": "MCQ",
+          "question": "What is an 'Ad Server'?",
+          "options": [
+            "Web hosting server",
+            "Technology to store and serve ads",
+            "Email server",
+            "Database server"
+          ],
+          "correctAnswer": "Technology to store and serve ads",
+          "explanation": "An Ad Server is a web server dedicated to storing advertisements and delivering them to website visitors."
+        },
+        {
+          "id": 202,
+          "type": "MCQ",
+          "question": "What is a 'CMP'?",
+          "options": [
+            "Content Management Platform",
+            "Creative Maker Pro",
+            "Consent Management Platform",
+            "Campaign Media Plan"
+          ],
+          "correctAnswer": "Consent Management Platform",
+          "explanation": "A Consent Management Platform (CMP) helps publishers collect and manage user consent for data processing (GDPR/CCPA compliance)."
+        },
+        {
+          "id": 203,
+          "type": "MCQ",
+          "question": "Who typically uses a DSP?",
+          "options": [
+            "Publishers",
+            "Advertisers/Agencies",
+            "Consumers",
+            "Internet Service Providers"
+          ],
+          "correctAnswer": "Advertisers/Agencies",
+          "explanation": "DSPs are used by advertisers and agencies to buy ad inventory programmatically."
+        }
+      ]
+    },
+    {
+      "id": "mediums",
+      "title": "3. Advertising Mediums",
+      "description": "Channels, Formats, Video, Native, and DOOH.",
+      "questions": [
+        {
+          "id": 14,
+          "type": "MCQ",
+          "question": "What is a 'Creative'?",
+          "options": [
+            "The strategy",
+            "The actual ad file (image/video/audio)",
+            "The campaign manager",
+            "The target audience"
+          ],
+          "correctAnswer": "The actual ad file (image/video/audio)",
+          "explanation": "A creative is the file that contains the actual advertisement a user sees or hears."
+        },
+        {
+          "id": 36,
+          "type": "MCQ",
+          "question": "What is 'Native Advertising'?",
+          "options": [
+            "Local advertising",
+            "Ads that blend with content",
+            "Mobile-only ads",
+            "Video advertisements"
+          ],
+          "correctAnswer": "Ads that blend with content",
+          "explanation": "Native ads are designed to blend seamlessly with surrounding content by matching the design, format, and behavior of the platform."
+        },
+        {
+          "id": 37,
+          "type": "MCQ",
+          "question": "What does DOOH stand for?",
+          "options": [
+            "Digital-Out-Of-Home",
+            "Direct Online Optimization Hub",
+            "Data-Oriented Online Hosting",
+            "Dynamic Output Optimization Handler"
+          ],
+          "correctAnswer": "Digital-Out-Of-Home",
+          "explanation": "DOOH refers to Digital-Out-Of-Home advertising, such as digital billboards and screens in public spaces."
+        },
+        {
+          "id": 55,
+          "type": "MCQ",
+          "question": "What does CTV stand for?",
+          "options": [
+            "Cable Television",
+            "Connected TV",
+            "Commercial TV",
+            "Central TV"
+          ],
+          "correctAnswer": "Connected TV",
+          "explanation": "CTV stands for Connected TV, referring to television sets that can connect to the internet and stream content."
+        },
+        {
+          "id": 49,
+          "type": "MCQ",
+          "question": "What does MAID stand for?",
+          "options": [
+            "Marketing Automation ID",
+            "Mobile Advertising ID",
+            "Media Analytics Integration Data",
+            "Managed Ad Inventory Database"
+          ],
+          "correctAnswer": "Mobile Advertising ID",
+          "explanation": "MAID stands for Mobile Advertising ID (or Mobile Device ID), a unique identifier assigned to mobile devices for advertising purposes."
+        },
+        {
+          "id": 301,
+          "type": "MCQ",
+          "question": "What is 'OTT'?",
+          "options": [
+            "Over-The-Top",
+            "On-The-Time",
+            "Only-TV-Time",
+            "Over-The-Table"
+          ],
+          "correctAnswer": "Over-The-Top",
+          "explanation": "OTT (Over-The-Top) refers to content providers that distribute streaming media as a standalone product directly to viewers over the internet."
+        },
+        {
+          "id": 302,
+          "type": "MCQ",
+          "question": "Which format is considered 'Rich Media'?",
+          "options": [
+            "Static JPEG",
+            "Text link",
+            "Interactive HTML5/Video",
+            "Plain text email"
+          ],
+          "correctAnswer": "Interactive HTML5/Video",
+          "explanation": "Rich Media ads include advanced features like video, audio, or other elements that encourage viewers to interact and engage with the content."
+        },
+        {
+          "id": 303,
+          "type": "MCQ",
+          "question": "What is 'In-Stream Video'?",
+          "options": [
+            "Video in a banner",
+            "Video played within video content (pre/mid/post-roll)",
+            "Video on social media feed",
+            "Video in email"
+          ],
+          "correctAnswer": "Video played within video content (pre/mid/post-roll)",
+          "explanation": "In-Stream video ads play before, during, or after streaming video content (like a TV commercial within a YouTube video)."
+        }
+      ]
+    },
+    {
+      "id": "adserving",
+      "title": "4. Ad Serving",
+      "description": "Ad Servers, Waterfalls, and Verification.",
+      "questions": [
+        {
+          "id": 13,
+          "type": "MCQ",
+          "question": "What does 'Header Bidding' enable?",
+          "options": [
+            "Slower page loads",
+            "Simultaneous demand competition before ad server",
+            "Only Google bids",
+            "Manual ad insertion"
+          ],
+          "correctAnswer": "Simultaneous demand competition before ad server",
+          "explanation": "Header bidding allows publishers to offer inventory to multiple ad exchanges simultaneously before making calls to their ad servers."
+        },
+        {
+          "id": 54,
+          "type": "MCQ",
+          "question": "What is 'Ad Verification'?",
+          "options": [
+            "Checking ad creativity",
+            "Ensuring ads appear as intended and detecting fraud",
+            "Spell-checking ad copy",
+            "Logo approval"
+          ],
+          "correctAnswer": "Ensuring ads appear as intended and detecting fraud",
+          "explanation": "Ad verification services provide information about where ads appeared, whether they were viewable, and if fraudulent traffic was detected."
+        },
+        {
+          "id": 401,
+          "type": "MCQ",
+          "question": "What is the 'Waterfall' model?",
+          "options": [
+            "Sequential ad calling usually by priority",
+            "Simultaneous bidding",
+            "Random selection",
+            "Water consumption tracking"
+          ],
+          "correctAnswer": "Sequential ad calling usually by priority",
+          "explanation": "The Waterfall (or daisy chain) is a technique where the publisher's ad server calls ad sources one by one in a pre-defined priority order."
+        },
+        {
+          "id": 402,
+          "type": "MCQ",
+          "question": "Who hosts the First-Party Ad Server?",
+          "options": [
+            "The Publisher",
+            "The Advertiser",
+            "The Agency",
+            "The ISP"
+          ],
+          "correctAnswer": "The Publisher",
+          "explanation": "A First-Party Ad Server is used by the publisher to manage their inventory and serve ads to their own website."
+        },
+        {
+          "id": 403,
+          "type": "MCQ",
+          "question": "What is 'Passback'?",
+          "options": [
+            "Returning an impression to another system if unfilled",
+            "Refunding money",
+            "Passing data to DSP",
+            "User scrolling back"
+          ],
+          "correctAnswer": "Returning an impression to another system if unfilled",
+          "explanation": "A passback (or default tag) sends the ad opportunity back to another system (usually lower in the waterfall) when the current partner cannot fill the impression."
+        }
+      ]
+    },
+    {
+      "id": "targeting",
+      "title": "5. Ad Targeting",
+      "description": "Contextual, Behavioral, Walled Gardens.",
+      "questions": [
+        {
+          "id": 7,
+          "type": "MCQ",
+          "question": "What is a 'Walled Garden'?",
+          "options": [
+            "Secure server",
+            "Closed ecosystem (Google/Meta)",
+            "Rich media creative",
+            "Green background"
+          ],
+          "correctAnswer": "Closed ecosystem (Google/Meta)",
+          "explanation": "A Walled Garden refers to a closed ecosystem where a platform controls access to its users, data, and inventory (e.g., Google, Apple, Meta, Amazon)."
+        },
+        {
+          "id": 19,
+          "type": "MCQ",
+          "question": "What is 'Contextual Targeting'?",
+          "options": [
+            "Targeting based on user cookies",
+            "Targeting based on page content/keywords",
+            "Targeting by location",
+            "Targeting by device"
+          ],
+          "correctAnswer": "Targeting based on page content/keywords",
+          "explanation": "Contextual targeting displays ads based on the content of the website page (e.g., shoe ads on a running blog) rather than user data."
+        },
+        {
+          "id": 41,
+          "type": "MCQ",
+          "question": "What is 'Audience Segmentation'?",
+          "options": [
+            "Dividing users into groups based on characteristics",
+            "Counting total users",
+            "Blocking certain users",
+            "Random user grouping"
+          ],
+          "correctAnswer": "Dividing users into groups based on characteristics",
+          "explanation": "Audience segmentation is the process of dividing users into specific groups based on shared characteristics, behaviors, or demographics."
+        },
+        {
+          "id": 16,
+          "type": "MCQ",
+          "question": "What is a 'Look-alike Model'?",
+          "options": [
+            "Copying ads",
+            "Targeting users similar to existing customers",
+            "Visual design tool",
+            "Fraud detection"
+          ],
+          "correctAnswer": "Targeting users similar to existing customers",
+          "explanation": "Look-alike modeling uses data to find new audiences who share characteristics with your best existing customers."
+        },
+        {
+          "id": 18,
+          "type": "MCQ",
+          "question": "What is 'Brand Safety'?",
+          "options": [
+            "Trademarking",
+            "Ensuring ads don't appear near inappropriate content",
+            "Secure login",
+            "High quality logos"
+          ],
+          "correctAnswer": "Ensuring ads don't appear near inappropriate content",
+          "explanation": "Brand safety practices ensure that ads do not appear on web pages with content that is inappropriate or illegal."
+        },
+        {
+          "id": 45,
+          "type": "MCQ",
+          "question": "What does GAMA stand for?",
+          "options": [
+            "Global Ad Media Association",
+            "Google, Apple, Meta, Amazon",
+            "General Advertising Metrics Analysis",
+            "Guaranteed Ad Marketplace Access"
+          ],
+          "correctAnswer": "Google, Apple, Meta, Amazon",
+          "explanation": "GAMA refers to Google, Apple, Meta, and Amazon, considered among the most prominent walled gardens in the AdTech ecosystem."
+        },
+        {
+          "id": 501,
+          "type": "MCQ",
+          "question": "What is 'Geotargeting'?",
+          "options": [
+            "Targeting based on user interests",
+            "Targeting based on user location",
+            "Targeting based on device type",
+            "Targeting based on time of day"
+          ],
+          "correctAnswer": "Targeting based on user location",
+          "explanation": "Geotargeting involves delivering content to a user based on their geographic location, such as country, city, or zip code."
+        },
+        {
+          "id": 502,
+          "type": "MCQ",
+          "question": "What is 'Retargeting'?",
+          "options": [
+            "Showing ads to new users",
+            "Showing ads to users who previously visited your site",
+            "Changing the target audience",
+            "Ignoring users"
+          ],
+          "correctAnswer": "Showing ads to users who previously visited your site",
+          "explanation": "Retargeting (or Remarketing) is a strategy to serve ads to users who have already visited your website or interacted with your brand."
+        },
+        {
+          "id": 503,
+          "type": "MCQ",
+          "question": "What is 'Dayparting'?",
+          "options": [
+            "Parting ways with an agency",
+            "Scheduling ads to run at specific times of day",
+            "Daily reporting",
+            "Splitting budget daily"
+          ],
+          "correctAnswer": "Scheduling ads to run at specific times of day",
+          "explanation": "Dayparting involves scheduling advertising campaigns to run only during specific hours of the day or days of the week."
+        }
+      ]
+    },
+    {
+      "id": "tracking",
+      "title": "6. Tracking & Reporting",
+      "description": "Impressions, Clicks, Viewability, and IVT.",
+      "questions": [
+        {
+          "id": 9,
+          "type": "MCQ",
+          "question": "What is a 'Viewable Impression'?",
+          "options": [
+            "Loaded ad",
+            "Good looking ad",
+            "Ad seen by a user",
+            "Clicked ad"
+          ],
+          "correctAnswer": "Ad seen by a user",
+          "explanation": "A viewable impression is a metric used to ensure the ad was contained in the viewable space of the browser window and seen by a real user."
+        },
+        {
+          "id": 34,
+          "type": "MCQ",
+          "question": "What is a 'Conversion'?",
+          "options": [
+            "Viewing an ad",
+            "Clicking an ad",
+            "Completing a desired action",
+            "Loading a webpage"
+          ],
+          "correctAnswer": "Completing a desired action",
+          "explanation": "A conversion occurs when a user completes a specific goal defined by the advertiser, such as making a purchase or signing up."
+        },
+        {
+          "id": 35,
+          "type": "MCQ",
+          "question": "What is a 'Landing Page'?",
+          "options": [
+            "Homepage",
+            "Page where users arrive after clicking an ad",
+            "Contact page",
+            "About page"
+          ],
+          "correctAnswer": "Page where users arrive after clicking an ad",
+          "explanation": "A landing page is a web page where users 'land' after clicking an ad or link, designed specifically to drive conversions."
+        },
+        {
+          "id": 38,
+          "type": "MCQ",
+          "question": "What is 'Viewability'?",
+          "options": [
+            "Ad quality",
+            "Whether an ad was actually seen by users",
+            "Ad creativity",
+            "Page load speed"
+          ],
+          "correctAnswer": "Whether an ad was actually seen by users",
+          "explanation": "Viewability measures whether an ad was actually in a position where a user could see it, as opposed to just being loaded on the page."
+        },
+        {
+          "id": 39,
+          "type": "MCQ",
+          "question": "What is 'Invalid Traffic' (IVT)?",
+          "options": [
+            "Slow internet connections",
+            "Bot traffic and fraud",
+            "International traffic",
+            "Mobile traffic"
+          ],
+          "correctAnswer": "Bot traffic and fraud",
+          "explanation": "Invalid Traffic refers to impressions, clicks, or conversions generated by bots or other fraudulent sources rather than real human users."
+        },
+        {
+          "id": 601,
+          "type": "MCQ",
+          "question": "What is a 'Pixel' in tracking?",
+          "options": [
+            "A screen dot",
+            "1x1 transparent image used to track user activity",
+            "Standard measure of ad size",
+            "A currency"
+          ],
+          "correctAnswer": "1x1 transparent image used to track user activity",
+          "explanation": "A tracking pixel is a 1x1 transparent image loaded on a webpage that triggers a server request, allowing tracking of user behavior."
+        },
+        {
+          "id": 602,
+          "type": "MCQ",
+          "question": "What is 'SIVT'?",
+          "options": [
+            "Simple Invalid Traffic",
+            "Sophisticated Invalid Traffic",
+            "Standard Internet Volume Traffic",
+            "Secure Invalid Traffic"
+          ],
+          "correctAnswer": "Sophisticated Invalid Traffic",
+          "explanation": "SIVT (Sophisticated Invalid Traffic) consists of more difficult to detect fraud mechanisms like hijacked devices or malware, requiring advanced analytics to identify."
+        },
+        {
+          "id": 603,
+          "type": "MCQ",
+          "question": "What defines a 'Bounce Rate'?",
+          "options": [
+            "Users who return to the site",
+            "Percentage of visitors who navigate away after viewing only one page",
+            "Rate of ad rejection",
+            "Speed of page load"
+          ],
+          "correctAnswer": "Percentage of visitors who navigate away after viewing only one page",
+          "explanation": "Bounce Rate is the percentage of visitors who enter the site and then leave ('bounce') rather than continuing to view other pages."
+        }
+      ]
+    },
+    {
+      "id": "buying",
+      "title": "7. Media-Buying",
+      "description": "RTB, Auctions, Deal IDs, and Programmatic.",
+      "questions": [
+        {
+          "id": 6,
+          "type": "MCQ",
+          "question": "What is Real-Time Bidding (RTB)?",
+          "options": [
+            "Buying ads in advance",
+            "Manual negotiation",
+            "Automated auction in milliseconds",
+            "Fixed-price marketplace"
+          ],
+          "correctAnswer": "Automated auction in milliseconds",
+          "explanation": "RTB is a technology where ad impressions are bought and sold via an instantaneous programmatic auction."
+        },
+        {
+          "id": 11,
+          "type": "MCQ",
+          "question": "What is 'Bid Shading'?",
+          "options": [
+            "Hiding bids",
+            "Optimizing bid price between first and second price",
+            "Blocking bids",
+            "Coloring ads"
+          ],
+          "correctAnswer": "Optimizing bid price between first and second price",
+          "explanation": "Bid shading is an algorithm used to pay less than the highest bid in a first-price auction, approximating a second-price auction outcome."
+        },
+        {
+          "id": 12,
+          "type": "MCQ",
+          "question": "What is a 'First-Price Auction'?",
+          "options": [
+            "Winner pays the second highest price",
+            "Winner pays exactly what they bid",
+            "Highest bidder loses",
+            "Fixed price only"
+          ],
+          "correctAnswer": "Winner pays exactly what they bid",
+          "explanation": "In a first-price auction, the highest bidder wins and pays exactly the amount they bid."
+        },
+        {
+          "id": 20,
+          "type": "MCQ",
+          "question": "What is a 'Deal ID'?",
+          "options": [
+            "A discount code",
+            "A unique identifier for a programmatic deal",
+            "A user ID",
+            "A server ID"
+          ],
+          "correctAnswer": "A unique identifier for a programmatic deal",
+          "explanation": "A Deal ID is a unique number assigned to an automated ad buy, allowing buyers and sellers to identify a specific package of inventory."
+        },
+        {
+          "id": 22,
+          "type": "MCQ",
+          "question": "What is an 'Ad Exchange'?",
+          "options": [
+            "A physical marketplace",
+            "A platform facilitating buying/selling of impressions",
+            "An ad swapping service",
+            "A creative exchange platform"
+          ],
+          "correctAnswer": "A platform facilitating buying/selling of impressions",
+          "explanation": "An ad exchange is a technological platform that facilitates the buying and selling of ad impressions between advertisers and publishers."
+        },
+        {
+          "id": 27,
+          "type": "MCQ",
+          "question": "What is a 'Second-Price Auction'?",
+          "options": [
+            "Winner pays what they bid",
+            "Winner pays second highest bid + $0.01",
+            "Second bidder wins",
+            "Fixed pricing model"
+          ],
+          "correctAnswer": "Winner pays second highest bid + $0.01",
+          "explanation": "In a second-price auction, the highest bidder wins but pays the amount bid by the second-highest bidder plus one cent."
+        },
+        {
+          "id": 32,
+          "type": "MCQ",
+          "question": "What is 'Floor Price'?",
+          "options": [
+            "Lowest allowed bid price",
+            "Highest possible price",
+            "Average market price",
+            "Starting auction price"
+          ],
+          "correctAnswer": "Lowest allowed bid price",
+          "explanation": "A floor price is the minimum price a publisher is willing to accept for their ad inventory in an auction."
+        },
+        {
+          "id": 33,
+          "type": "MCQ",
+          "question": "What is 'Programmatic Advertising'?",
+          "options": [
+            "Manual ad buying",
+            "Automated buying/selling of ad inventory",
+            "TV advertising",
+            "Print media buying"
+          ],
+          "correctAnswer": "Automated buying/selling of ad inventory",
+          "explanation": "Programmatic advertising is the automated buying and selling of online advertising using technology and algorithms."
+        },
+        {
+          "id": 701,
+          "type": "MCQ",
+          "question": "What is 'Programmatic Direct'?",
+          "options": [
+            "Automated buying of guaranteed inventory",
+            "Direct email marketing",
+            "Manual buying",
+            "Buying via telephone"
+          ],
+          "correctAnswer": "Automated buying of guaranteed inventory",
+          "explanation": "Programmatic Direct allows advertisers to buy guaranteed inventory directly from publishers via an automated interface, skipping the auction."
+        },
+        {
+          "id": 702,
+          "type": "MCQ",
+          "question": "What is 'PMP'?",
+          "options": [
+            "Private Marketplace",
+            "Public Media Platform",
+            "Programmatic Media Plan",
+            "Personal Marketing Place"
+          ],
+          "correctAnswer": "Private Marketplace",
+          "explanation": "A Private Marketplace (PMP) is an invite-only auction where high-caliber publishers offer their premium inventory to a selected group of buyers."
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "8. User Identification",
+      "description": "Cookies, IDs, Privacy Sandbox, and Clean Rooms.",
+      "questions": [
+        {
+          "id": 28,
+          "type": "MCQ",
+          "question": "What are 'Third-Party Cookies'?",
+          "options": [
+            "Cookies set by the website you visit",
+            "Cookies set by domains other than the one you're visiting",
+            "Browser default cookies",
+            "Server-side cookies"
+          ],
+          "correctAnswer": "Cookies set by domains other than the one you're visiting",
+          "explanation": "Third-party cookies are set by a domain other than the one the user is visiting, typically used for tracking and advertising purposes."
+        },
+        {
+          "id": 29,
+          "type": "MCQ",
+          "question": "What are 'First-Party Cookies'?",
+          "options": [
+            "Cookies sold to third parties",
+            "Cookies set by the website you're visiting",
+            "Advertising cookies only",
+            "Tracking cookies only"
+          ],
+          "correctAnswer": "Cookies set by the website you're visiting",
+          "explanation": "First-party cookies are created and stored by the website domain that the user is directly visiting."
+        },
+        {
+          "id": 30,
+          "type": "MCQ",
+          "question": "What is a 'Universal ID'?",
+          "options": [
+            "A government ID",
+            "A cross-platform user identifier",
+            "A website login",
+            "An IP address"
+          ],
+          "correctAnswer": "A cross-platform user identifier",
+          "explanation": "Universal IDs are identifier solutions designed to work across different websites and platforms, often as an alternative to third-party cookies."
+        },
+        {
+          "id": 46,
+          "type": "MCQ",
+          "question": "What is 'Fingerprinting' in AdTech?",
+          "options": [
+            "Biometric login",
+            "Identifying users without cookies based on device/browser characteristics",
+            "Touchscreen tracking",
+            "Password security"
+          ],
+          "correctAnswer": "Identifying users without cookies based on device/browser characteristics",
+          "explanation": "Fingerprinting is a method of identifying users by collecting characteristics about their device and browser configuration without using cookies."
+        },
+        {
+          "id": 47,
+          "type": "MCQ",
+          "question": "What is a 'Clean Room' in AdTech?",
+          "options": [
+            "Data center",
+            "Secure environment for analyzing data without exposing raw data",
+            "Ad-free zone",
+            "Cookie deletion tool"
+          ],
+          "correctAnswer": "Secure environment for analyzing data without exposing raw data",
+          "explanation": "Clean rooms are secure environments where different parties can analyze combined data without exposing their raw individual user data to each other."
+        },
+        {
+          "id": 48,
+          "type": "MCQ",
+          "question": "What is 'Privacy Sandbox'?",
+          "options": [
+            "VPN service",
+            "Google's initiative for privacy-preserving advertising",
+            "Encrypted browser",
+            "Data deletion tool"
+          ],
+          "correctAnswer": "Google's initiative for privacy-preserving advertising",
+          "explanation": "Privacy Sandbox is Google's initiative to develop privacy-preserving alternatives to third-party cookies for online advertising."
+        },
+        {
+          "id": 801,
+          "type": "MCQ",
+          "question": "Which browser first blocked 3rd-party cookies by default?",
+          "options": [
+            "Chrome",
+            "Safari (ITP)",
+            "Firefox",
+            "Edge"
+          ],
+          "correctAnswer": "Safari (ITP)",
+          "explanation": "Apple's Safari was the first major browser to block third-party cookies by default with its Intelligent Tracking Prevention (ITP)."
+        },
+        {
+          "id": 802,
+          "type": "MCQ",
+          "question": "What is 'ITP'?",
+          "options": [
+            "International Tech Protocol",
+            "Intelligent Tracking Prevention",
+            "Identity Transfer Protocol",
+            "Internal Traffic Pacing"
+          ],
+          "correctAnswer": "Intelligent Tracking Prevention",
+          "explanation": "ITP (Intelligent Tracking Prevention) is a feature in WebKit (Safari) that reduces cross-site tracking by limiting cookie usage."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "9. Data in AdTech",
+      "description": "DMPs, Enrichment, and Taxonomies.",
+      "questions": [
+        {
+          "id": 8,
+          "type": "MCQ",
+          "question": "What does a DMP mostly deal with?",
+          "options": [
+            "Buying media",
+            "Serving creatives",
+            "Audience data management",
+            "Payments"
+          ],
+          "correctAnswer": "Audience data management",
+          "explanation": "A DMP collects, stores, and organizes data from multiple sources to help with audience segmentation and targeting."
+        },
+        {
+          "id": 40,
+          "type": "MCQ",
+          "question": "What is 'Data Enrichment' in a DMP?",
+          "options": [
+            "Adding more storage",
+            "Enhancing data with additional attributes",
+            "Deleting old data",
+            "Encrypting data"
+          ],
+          "correctAnswer": "Enhancing data with additional attributes",
+          "explanation": "Data enrichment is the process of enhancing collected data with additional attributes and information from various sources to make it more valuable."
+        },
+        {
+          "id": 901,
+          "type": "MCQ",
+          "question": "What is 'First-Party Data'?",
+          "options": [
+            "Data bought from a vendor",
+            "Data collected directly from your own audience",
+            "Data shared by a partner",
+            "Public data"
+          ],
+          "correctAnswer": "Data collected directly from your own audience",
+          "explanation": "First-party data is the information you collect directly from your audience or customers (e.g., website behavior, CRM data)."
+        },
+        {
+          "id": 902,
+          "type": "MCQ",
+          "question": "What is 'Second-Party Data'?",
+          "options": [
+            "Someone else's First-Party Data",
+            "Public data",
+            "Data stored on a second server",
+            "Backup data"
+          ],
+          "correctAnswer": "Someone else's First-Party Data",
+          "explanation": "Second-party data is essentially someone else's first-party data that you access directly from the source through a partnership."
+        },
+        {
+          "id": 903,
+          "type": "MCQ",
+          "question": "What is 'Third-Party Data'?",
+          "options": [
+            "Data aggregated from various sources and sold by vendors",
+            "Data from your own site",
+            "Data from a partner",
+            "Confidential data"
+          ],
+          "correctAnswer": "Data aggregated from various sources and sold by vendors",
+          "explanation": "Third-party data is data bought from outside sources (data aggregators) that are not the original collectors of that data."
+        }
+      ]
+    },
+    {
+      "id": "attribution",
+      "title": "10. Attribution",
+      "description": "Models, Windows, and Measurement.",
+      "questions": [
+        {
+          "id": 15,
+          "type": "MCQ",
+          "question": "What is 'Attribution'?",
+          "options": [
+            "Assigning credit for a conversion",
+            "Naming a campaign",
+            "Buying data",
+            "Serving an ad"
+          ],
+          "correctAnswer": "Assigning credit for a conversion",
+          "explanation": "Attribution is the science of assigning credit to marketing touchpoints that lead to a conversion."
+        },
+        {
+          "id": 42,
+          "type": "MCQ",
+          "question": "What is 'Last Click Attribution'?",
+          "options": [
+            "First touchpoint gets all credit",
+            "Last touchpoint gets all credit",
+            "All touchpoints get equal credit",
+            "Middle touchpoints get credit"
+          ],
+          "correctAnswer": "Last touchpoint gets all credit",
+          "explanation": "In Last Click Attribution, 100% of the conversion credit is given to the last touchpoint before the conversion occurred."
+        },
+        {
+          "id": 43,
+          "type": "MCQ",
+          "question": "What is 'Linear Attribution'?",
+          "options": [
+            "First click gets all credit",
+            "Last click gets all credit",
+            "All touchpoints get equal credit",
+            "Only middle touchpoints get credit"
+          ],
+          "correctAnswer": "All touchpoints get equal credit",
+          "explanation": "In Linear Attribution, credit for a conversion is distributed equally across all touchpoints in the customer journey."
+        },
+        {
+          "id": 51,
+          "type": "MCQ",
+          "question": "What is 'Time Decay Attribution'?",
+          "options": [
+            "Older touchpoints get more credit",
+            "Recent touchpoints get more credit",
+            "All touchpoints get equal credit",
+            "First touchpoint gets all credit"
+          ],
+          "correctAnswer": "Recent touchpoints get more credit",
+          "explanation": "In Time Decay Attribution, touchpoints closer to the conversion receive more credit than earlier ones in the customer journey."
+        },
+        {
+          "id": 52,
+          "type": "MCQ",
+          "question": "What is 'Position Based Attribution'?",
+          "options": [
+            "First and last touchpoints get most credit",
+            "Middle touchpoints get most credit",
+            "Equal credit to all",
+            "Random credit assignment"
+          ],
+          "correctAnswer": "First and last touchpoints get most credit",
+          "explanation": "Position Based Attribution (also called U-shaped) gives 40% credit to first touch, 40% to last touch, and distributes remaining 20% among middle touchpoints."
+        },
+        {
+          "id": 1001,
+          "type": "MCQ",
+          "question": "What is 'MTA' in measurement?",
+          "options": [
+            "Multi-Touch Attribution",
+            "Media Trading Agreement",
+            "Manual Traffic Analysis",
+            "Mobile Tracking App"
+          ],
+          "correctAnswer": "Multi-Touch Attribution",
+          "explanation": "Multi-Touch Attribution (MTA) is a measurement technique that evaluates the impact of each touchpoint across the consumer journey."
+        },
+        {
+          "id": 1002,
+          "type": "MCQ",
+          "question": "What is an 'Attribution Window'?",
+          "options": [
+            "The time period after an ad interaction during which a conversion is credited",
+            "A popup window",
+            "The browser window",
+            "A specific month"
+          ],
+          "correctAnswer": "The time period after an ad interaction during which a conversion is credited",
+          "explanation": "An attribution window (or lookback window) is the defined period of time after a user interacts with an ad for which a conversion will be attributed to that ad."
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "title": "11. AdTech Dilemma & Strategy",
+      "description": "Operations, Budgeting, and Strategy.",
+      "questions": [
+        {
+          "id": 3,
+          "type": "MCQ",
+          "question": "What is 'Remnant Inventory'?",
+          "options": [
+            "Premium ad space",
+            "Highest priced inventory",
+            "Unsold inventory sold for less",
+            "Video-only inventory"
+          ],
+          "correctAnswer": "Unsold inventory sold for less",
+          "explanation": "Remnant inventory is inventory that a publisher has been unable to sell directly and is often sold for a lower price via networks or exchanges."
+        },
+        {
+          "id": 17,
+          "type": "MCQ",
+          "question": "What is 'Frequency Capping'?",
+          "options": [
+            "Limiting how often a user sees an ad",
+            "Boosting ad volume",
+            "Stopping all ads",
+            "Capping budgets"
+          ],
+          "correctAnswer": "Limiting how often a user sees an ad",
+          "explanation": "Frequency capping limits the number of times a specific user sees a particular ad within a given time period."
+        },
+        {
+          "id": 23,
+          "type": "MCQ",
+          "question": "What is 'Premium Inventory'?",
+          "options": [
+            "Cheap unsold space",
+            "Most valuable publisher ad space",
+            "Mobile-only ads",
+            "Video ads only"
+          ],
+          "correctAnswer": "Most valuable publisher ad space",
+          "explanation": "Premium inventory is the publisher's most valuable space, typically found on well-known sites, high-traffic pages, or highly visible placements."
+        },
+        {
+          "id": 25,
+          "type": "MCQ",
+          "question": "What is 'AdOps'?",
+          "options": [
+            "Ad Operations team",
+            "Ad Optimization Software",
+            "Advertising Options",
+            "Advanced Operations Platform"
+          ],
+          "correctAnswer": "Ad Operations team",
+          "explanation": "AdOps refers to the people responsible for setting up ad campaigns, trafficking tags, and managing campaign execution."
+        },
+        {
+          "id": 26,
+          "type": "MCQ",
+          "question": "What is 'DCO'?",
+          "options": [
+            "Data Collection Optimization",
+            "Dynamic Creative Optimization",
+            "Direct Campaign Orchestration",
+            "Digital Content Overlay"
+          ],
+          "correctAnswer": "Dynamic Creative Optimization",
+          "explanation": "Dynamic Creative Optimization (DCO) is a process where advertisers show personalized ads to individual users based on information known about them."
+        },
+        {
+          "id": 44,
+          "type": "MCQ",
+          "question": "What is 'Budget Pacing'?",
+          "options": [
+            "Spending budget as fast as possible",
+            "Distributing budget evenly over campaign duration",
+            "Saving budget for last day",
+            "Random budget allocation"
+          ],
+          "correctAnswer": "Distributing budget evenly over campaign duration",
+          "explanation": "Budget pacing (or distribution) is the strategy of spreading ad spend evenly across the campaign duration to avoid spending the entire budget too quickly."
+        },
+        {
+          "id": 1101,
+          "type": "MCQ",
+          "question": "Why would a company build their own Ad Tech stack?",
+          "options": [
+            "It's always cheaper",
+            "To have full control over data and customisation",
+            "Because it's easy",
+            "To avoid paying tax"
+          ],
+          "correctAnswer": "To have full control over data and customisation",
+          "explanation": "Companies build their own stack (in-housing) to gain transparency, control over proprietary data, and customization that off-the-shelf solutions can't provide."
+        },
+        {
+          "id": 1102,
+          "type": "MCQ",
+          "question": "What is a 'Media Plan'?",
+          "options": [
+            "A map of the internet",
+            "A document detailing the strategy, budget, and placement of ads",
+            "A video file",
+            "A publisher agreement"
+          ],
+          "correctAnswer": "A document detailing the strategy, budget, and placement of ads",
+          "explanation": "A Media Plan is a comprehensive guide to a campaign's advertising efforts, including audience targeting, channels, budget allocation, and timing."
+        }
+      ]
+    }
+  ]
+}
