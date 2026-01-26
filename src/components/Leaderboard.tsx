@@ -1,63 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Medal, Award, X } from 'lucide-react';
-
-interface LeaderboardEntry {
-    name: string;
-    score: number;
-    totalQuestions: number;
-    timeUsed: number;
-    date: string;
-}
+import { api } from '../services/api';
+import type { ScoreData } from '../services/api';
 
 interface LeaderboardProps {
     isOpen: boolean;
     onClose: () => void;
-    currentScore?: {
-        name: string;
-        score: number;
-        totalQuestions: number;
-        timeUsed: number;
-    };
 }
 
-export const Leaderboard: React.FC<LeaderboardProps> = ({ isOpen, onClose, currentScore }) => {
-    const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
-
-    const API_URL = 'http://localhost:3001/api/scores';
+export const Leaderboard: React.FC<LeaderboardProps> = ({ isOpen, onClose }) => {
+    const [entries, setEntries] = useState<ScoreData[]>([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         if (isOpen) {
-            fetch(`${API_URL}?limit=10`)
-                .then(res => res.json())
+            setLoading(true);
+            api.getLeaderboard(10)
                 .then(data => setEntries(data))
-                .catch(err => console.error('Failed to load leaderboard', err));
+                .catch(err => console.error('Failed to load leaderboard', err))
+                .finally(() => setLoading(false));
         }
     }, [isOpen]);
 
-    useEffect(() => {
-        if (currentScore && isOpen) {
-            fetch(API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(currentScore)
-            })
-                .then(res => res.json())
-                .then(newEntry => {
-                    setEntries(prev => {
-                        const updated = [...prev, newEntry]
-                            .sort((a, b) => b.percentage - a.percentage || a.timeUsed - b.timeUsed)
-                            .slice(0, 10);
-                        return updated;
-                    });
-                    // Refresh list to be sure
-                    return fetch(`${API_URL}?limit=10`);
-                })
-                .then(res => res.json())
-                .then(data => setEntries(data))
-                .catch(err => console.error('Failed to save score', err));
-        }
-    }, [currentScore, isOpen]);
 
     if (!isOpen) return null;
 

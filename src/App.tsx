@@ -8,6 +8,7 @@ import { ReviewBeforeSubmit } from './components/ReviewBeforeSubmit';
 import { ChapterSelection } from './components/ChapterSelection';
 import { Leaderboard } from './components/Leaderboard';
 import { InsightEngine } from './components/InsightEngine';
+import { api } from './services/api'; // Added import
 import questionsData from './data/questions.json';
 import insightData from './data/insight-loops.json';
 
