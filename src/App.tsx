@@ -37,7 +37,6 @@ function App() {
   const [selectedChapterId, setSelectedChapterId] = useState<string | null>(null);
   const [completedChapters, setCompletedChapters] = useState<string[]>([]);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
-  const [currentScoreData, setCurrentScoreData] = useState<any>(undefined);
 
   // Dark mode effect
   useEffect(() => {
@@ -169,6 +168,25 @@ function App() {
   };
 
   const handleSubmitQuiz = () => {
+    // Calculate final score
+    let score = 0;
+    questions.forEach((q, index) => {
+      if (userAnswers[index] === q.correctAnswer) score++;
+    });
+
+    // Time used
+    const timeUsed = (selectedChapterId === 'overall' ? 3600 : questions.length * 90) - timeRemaining;
+
+    // Submit to API
+    api.submitScore({
+      name: userName,
+      score,
+      totalQuestions: questions.length,
+      timeUsed,
+      percentage: Math.round((score / questions.length) * 100),
+      chapterId: selectedChapterId || 'overall'
+    }).catch(err => console.error("Score submission failed:", err));
+
     setQuizSubmitted(true);
     setGameState('results');
   };
@@ -279,7 +297,6 @@ function App() {
                   {/* Leaderboard Button */}
                   <button
                     onClick={() => {
-                      setCurrentScoreData(undefined);
                       setShowLeaderboard(true);
                     }}
                     className="px-4 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-yellow-500 rounded-xl transition-all shadow-lg hover:scale-105 active:scale-95 flex items-center justify-center group"
@@ -395,17 +412,6 @@ function App() {
               questions={questions}
               userAnswers={userAnswers}
               onShowLeaderboard={() => {
-                // Prepare score data for submission
-                const score = calculateScore();
-                const totalQuestions = questions.length;
-                const timeUsed = (selectedChapterId === 'overall' ? 3600 : questions.length * 90) - timeRemaining;
-
-                setCurrentScoreData({
-                  name: userName,
-                  score,
-                  totalQuestions,
-                  timeUsed
-                });
                 setShowLeaderboard(true);
               }}
             />
@@ -415,7 +421,6 @@ function App() {
         <Leaderboard
           isOpen={showLeaderboard}
           onClose={() => setShowLeaderboard(false)}
-          currentScore={currentScoreData}
         />
       </div>
 

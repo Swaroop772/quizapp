@@ -16,8 +16,10 @@ model Score {
   totalQuestions Int
   timeUsed       Int      // in seconds
   percentage     Int
+  chapterId      String   @default("overall")
   createdAt      DateTime @default(now())
   
   @@index([percentage, timeUsed])
   @@index([createdAt])
+  @@index([chapterId])
 }

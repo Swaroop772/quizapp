@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 // POST /api/scores - Submit a new score
 router.post('/', async (req, res) => {
     try {
-        const { name, score, totalQuestions, timeUsed } = req.body;
+        const { name, score, totalQuestions, timeUsed, chapterId = 'overall' } = req.body;
 
         // Validation
         if (!name || score === undefined || !totalQuestions || !timeUsed) {
@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
                 totalQuestions,
                 timeUsed,
                 percentage,
+                chapterId
             },
         });
 
@@ -37,8 +38,12 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const limit = parseInt(req.query.limit as string) || 10;
+        const chapterId = req.query.chapterId as string;
+
+        const where = chapterId ? { chapterId } : {};
 
         const scores = await prisma.score.findMany({
+            where,
             orderBy: [
                 { percentage: 'desc' },
                 { timeUsed: 'asc' },
