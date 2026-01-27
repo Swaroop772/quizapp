@@ -37,6 +37,7 @@ function App() {
   const [selectedChapterId, setSelectedChapterId] = useState<string | null>(null);
   const [completedChapters, setCompletedChapters] = useState<string[]>([]);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [userRank, setUserRank] = useState<number | null>(null);
 
   // Dark mode effect
   useEffect(() => {
@@ -177,7 +178,7 @@ function App() {
     // Time used
     const timeUsed = (selectedChapterId === 'overall' ? 3600 : questions.length * 90) - timeRemaining;
 
-    // Submit to API
+    // Submit to API and get rank
     api.submitScore({
       name: userName,
       score,
@@ -185,7 +186,13 @@ function App() {
       timeUsed,
       percentage: Math.round((score / questions.length) * 100),
       chapterId: selectedChapterId || 'overall'
-    }).catch(err => console.error("Score submission failed:", err));
+    })
+      .then(response => {
+        if (response && response.rank) {
+          setUserRank(response.rank);
+        }
+      })
+      .catch(err => console.error("Score submission failed:", err));
 
     setQuizSubmitted(true);
     setGameState('results');
@@ -411,6 +418,7 @@ function App() {
               userName={userName}
               questions={questions}
               userAnswers={userAnswers}
+              userRank={userRank}
               onShowLeaderboard={() => {
                 setShowLeaderboard(true);
               }}

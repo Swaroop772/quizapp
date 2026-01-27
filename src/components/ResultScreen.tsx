@@ -18,6 +18,7 @@ interface ResultScreenProps {
     userName?: string;
     questions?: Question[];
     userAnswers?: Record<number, string>;
+    userRank?: number | null;
     onShowLeaderboard?: () => void;
 }
 
@@ -28,6 +29,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
     userName,
     questions = [],
     userAnswers = {},
+    userRank,
     onShowLeaderboard
 }) => {
     const percentage = Math.round((score / totalQuestions) * 100);
@@ -116,10 +118,25 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-slate-600 dark:text-slate-400 mb-8 text-lg"
+                className="text-slate-600 dark:text-slate-400 mb-2 text-lg"
             >
                 You scored {score} out of {totalQuestions}
             </motion.p>
+
+            {userRank && (
+                <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.4, type: "spring" }}
+                    className="mb-8 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 dark:from-yellow-400/20 dark:to-amber-400/20 px-6 py-3 rounded-full border-2 border-yellow-500/30 dark:border-yellow-400/30"
+                >
+                    <Trophy className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
+                    <span className="text-lg font-bold text-yellow-700 dark:text-yellow-300">
+                        Rank #{userRank}
+                    </span>
+                    <span className="text-sm text-yellow-600/80 dark:text-yellow-400/80">on leaderboard</span>
+                </motion.div>
+            )}
 
             <motion.div
                 initial={{ y: 20, opacity: 0 }}

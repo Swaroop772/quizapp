@@ -27,7 +27,26 @@ router.post('/', async (req, res) => {
             },
         });
 
-        res.status(201).json(newScore);
+        // Calculate rank for this score
+        const where = chapterId ? { chapterId } : {};
+        const betterScores = await prisma.score.count({
+            where: {
+                ...where,
+                OR: [
+                    { percentage: { gt: percentage } },
+                    {
+                        AND: [
+                            { percentage: percentage },
+                            { timeUsed: { lt: timeUsed } }
+                        ]
+                    }
+                ]
+            }
+        });
+
+        const rank = betterScores + 1;
+
+        res.status(201).json({ ...newScore, rank });
     } catch (error) {
         console.error('Error saving score:', error);
         res.status(500).json({ error: 'Failed to save score' });
