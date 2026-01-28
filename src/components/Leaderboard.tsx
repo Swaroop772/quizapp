@@ -12,14 +12,15 @@ interface LeaderboardProps {
 export const Leaderboard: React.FC<LeaderboardProps> = ({ isOpen, onClose }) => {
     const [entries, setEntries] = useState<ScoreData[]>([]);
     const [loading, setLoading] = useState(false);
-    const [selectedChapterId, setSelectedChapterId] = useState<string>('overall');
+    const [selectedChapterId, setSelectedChapterId] = useState<string>('');
     const [chapters, setChapters] = useState<{ id: string; title: string }[]>([]);
 
     useEffect(() => {
         // Load chapters dynamically
         import('../data/questions.json').then(mod => {
             setChapters([
-                { id: 'overall', title: 'Overall Leaderboard' },
+                { id: '', title: 'All Categories' },
+                { id: 'overall', title: 'Full Quiz Mode' },
                 ...mod.default.chapters.map(c => ({ id: c.id, title: c.title }))
             ]);
         });
