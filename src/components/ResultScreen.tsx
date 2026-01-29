@@ -19,7 +19,6 @@ interface ResultScreenProps {
     questions?: Question[];
     userAnswers?: Record<number, string>;
     userRank?: number | null;
-    onShowLeaderboard?: () => void;
 }
 
 export const ResultScreen: React.FC<ResultScreenProps> = ({
@@ -30,7 +29,6 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
     questions = [],
     userAnswers = {},
     userRank,
-    onShowLeaderboard
 }) => {
     const percentage = Math.round((score / totalQuestions) * 100);
 
@@ -109,7 +107,7 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600 mb-2"
+                className="text-5xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-100 to-white mb-4 drop-shadow-sm"
             >
                 {userName ? `${userName}, ` : ''}{message}
             </motion.h1>
@@ -128,13 +126,13 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.4, type: "spring" }}
-                    className="mb-8 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 dark:from-yellow-400/20 dark:to-amber-400/20 px-6 py-3 rounded-full border-2 border-yellow-500/30 dark:border-yellow-400/30"
+                    className="mb-8 inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 backdrop-blur-md px-6 py-3 rounded-full border border-yellow-500/20"
                 >
-                    <Trophy className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
-                    <span className="text-lg font-bold text-yellow-700 dark:text-yellow-300">
+                    <Trophy className="w-5 h-5 text-yellow-400" />
+                    <span className="text-lg font-display font-bold text-yellow-200">
                         Rank #{userRank}
                     </span>
-                    <span className="text-sm text-yellow-600/80 dark:text-yellow-400/80">on leaderboard</span>
+                    <span className="text-sm text-yellow-400/60">on leaderboard</span>
                 </motion.div>
             )}
 
@@ -142,18 +140,18 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="bg-white dark:bg-slate-800 rounded-2xl p-8 mb-8 border border-slate-200 dark:border-slate-700 shadow-lg"
+                className="bg-slate-900/40 backdrop-blur-xl rounded-2xl p-8 mb-8 border border-white/10 shadow-2xl"
             >
                 <div className="flex justify-between items-end mb-2">
-                    <span className="text-slate-600 dark:text-slate-400 font-medium">Accuracy</span>
-                    <span className="text-3xl font-bold text-brand-600">{percentage}%</span>
+                    <span className="text-slate-400 font-medium font-display">Accuracy</span>
+                    <span className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-accent-300">{percentage}%</span>
                 </div>
-                <div className="w-full bg-slate-200 dark:bg-slate-700 h-4 rounded-full overflow-hidden">
+                <div className="w-full bg-slate-800/50 h-4 rounded-full overflow-hidden border border-white/5">
                     <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${percentage}%` }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="bg-gradient-to-r from-brand-500 to-accent-500 h-full rounded-full"
+                        className="bg-gradient-to-r from-brand-500 to-accent-500 h-full rounded-full shadow-[0_0_20px_rgba(34,211,238,0.3)]"
                     />
                 </div>
             </motion.div>
@@ -218,13 +216,12 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.9 }}
-                    onClick={onShowLeaderboard}
+                    onClick={() => window.location.reload()} // Simple reload to get back to start for now, or handle higher up
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-400 border-2 border-brand-200 dark:border-brand-900 font-bold rounded-xl transition-all shadow-xl flex items-center justify-center gap-2 w-full md:w-auto"
+                    className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-2 border-slate-200 dark:border-slate-700 font-bold rounded-xl transition-all shadow-xl flex items-center justify-center gap-2 w-full md:w-auto hover:bg-slate-50 dark:hover:bg-slate-700"
                 >
-                    <Trophy size={20} />
-                    View Leaderboard
+                    Back to Menu
                 </motion.button>
             </div>
         </div>

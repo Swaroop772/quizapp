@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Dot } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 
 interface QuestionNavigatorProps {
@@ -17,9 +16,10 @@ export const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     onNavigate,
 }) => {
     return (
-        <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-slate-200 shadow-lg">
-            <h3 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wider">
-                Question Navigator
+        <div className="bg-slate-900/60 backdrop-blur-xl p-5 rounded-2xl border border-white/10 shadow-lg">
+            <h3 className="text-sm font-bold text-white mb-4 uppercase tracking-wider font-display flex items-center gap-2">
+                <span className="w-1 h-4 bg-brand-500 rounded-full" />
+                Navigator
             </h3>
             <div className="grid grid-cols-5 gap-2">
                 {Array.from({ length: totalQuestions }, (_, i) => {
@@ -33,33 +33,33 @@ export const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className={twMerge(
-                                "aspect-square rounded-lg font-semibold text-sm transition-all flex items-center justify-center relative",
-                                isCurrent && "ring-2 ring-brand-500 ring-offset-2",
-                                isAnswered && !isCurrent && "bg-green-100 text-green-700 border border-green-300",
-                                !isAnswered && !isCurrent && "bg-slate-100 text-slate-400 border border-slate-300 hover:bg-slate-200",
-                                isCurrent && isAnswered && "bg-brand-500 text-white",
-                                isCurrent && !isAnswered && "bg-orange-100 text-orange-700 border-2 border-orange-500"
+                                "aspect-square rounded-xl font-bold text-sm transition-all flex items-center justify-center relative border",
+                                isCurrent && "ring-2 ring-brand-400 ring-offset-2 ring-offset-slate-900 border-transparent",
+                                isAnswered && !isCurrent && "bg-green-500/20 text-green-400 border-green-500/30 hover:bg-green-500/30",
+                                !isAnswered && !isCurrent && "bg-white/5 text-slate-500 border-white/5 hover:bg-white/10 hover:text-white hover:border-white/20",
+                                isCurrent && isAnswered && "bg-green-500 text-white border-green-500",
+                                isCurrent && !isAnswered && "bg-brand-500 text-white border-brand-500"
                             )}
                         >
                             {i + 1}
                             {isAnswered && !isCurrent && (
-                                <CheckCircle className="absolute -top-1 -right-1 w-4 h-4 text-green-600 bg-white rounded-full" />
+                                <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
                             )}
                             {isCurrent && (
-                                <Dot className="absolute -top-1 -right-1 w-5 h-5 text-orange-600 bg-white rounded-full animate-pulse" />
+                                <div className="absolute -bottom-1 w-1 h-1 bg-white rounded-full" />
                             )}
                         </motion.button>
                     );
                 })}
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
-                <div className="flex items-center gap-1">
-                    <div className="w-3 h-3 rounded bg-green-100 border border-green-300"></div>
-                    <span>Answered</span>
+            <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+                <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-green-500/20 border border-green-500/50 shadow-[0_0_8px_rgba(34,197,94,0.4)]"></div>
+                    <span>Done</span>
                 </div>
-                <div className="flex items-center gap-1">
-                    <div className="w-3 h-3 rounded bg-slate-100 border border-slate-300"></div>
-                    <span>Pending</span>
+                <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-white/10 border border-white/20"></div>
+                    <span>Left</span>
                 </div>
             </div>
         </div>
