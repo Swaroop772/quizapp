@@ -33,7 +33,7 @@ export const MouseParallax: React.FC = () => {
     const layer3Y = useTransform(springY, value => value * 20);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-slate-900">
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
             {/* Tech Grid Background */}
             <div className="absolute inset-0 opacity-[0.03]"
                 style={{

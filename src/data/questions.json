@@ -1474,6 +1474,266 @@
           ],
           "correctAnswer": "Ads on smart speakers and voice assistants",
           "explanation": "Voice-activated advertising delivers audio ads through smart speakers like Alexa or Google Home and voice assistant platforms."
+        },
+        {
+          "id": 350,
+          "type": "MCQ",
+          "question": "Which audio ad format is read live by the podcast host?",
+          "options": [
+            "Programmatic Audio",
+            "Host-Read Ad",
+            "Pre-Recorded Spot",
+            "Mid-Roll Insertion"
+          ],
+          "correctAnswer": "Host-Read Ad",
+          "explanation": "Host-read ads are delivered by the podcast host themselves, often feeling more authentic and integrated into the show's content."
+        },
+        {
+          "id": 351,
+          "type": "MCQ",
+          "question": "What distinguishes 'Dynamic Creative' from standard display ads?",
+          "options": [
+            "Larger file size",
+            "Video content",
+            "Automatically changing elements based on user data",
+            "Higher cost only"
+          ],
+          "correctAnswer": "Automatically changing elements based on user data",
+          "explanation": "Dynamic creatives automatically adapt elements (copy, images, offers) in real-time based on viewer data like location, weather, or product history."
+        },
+        {
+          "id": 352,
+          "type": "MCQ",
+          "question": "In DOOH, what is 'dwell time'?",
+          "options": [
+            "Wait time for ad loading",
+            "Length of time an ad stays on screen",
+            "Time a viewer spends in the vicinity of the screen",
+            "Server latency"
+          ],
+          "correctAnswer": "Time a viewer spends in the vicinity of the screen",
+          "explanation": "Dwell time in DOOH refers to the duration a person remains in the viewable area of a digital screen, impacting the opportunity to see ads."
+        },
+        {
+          "id": 353,
+          "type": "MCQ",
+          "question": "What is a 'Push Notification Ad'?",
+          "options": [
+            "Email alert",
+            "Ad delivered to a user's device notification tray",
+            "Ad that pushes content down",
+            "Forced popup"
+          ],
+          "correctAnswer": "Ad delivered to a user's device notification tray",
+          "explanation": "Push notification ads appear as system alerts on a user's mobile or desktop device, resembling native app notifications."
+        },
+        {
+          "id": 354,
+          "type": "MCQ",
+          "question": "What is 'Interactive Video'?",
+          "options": [
+            "Video with subtitles",
+            "Video allowing user inputs (clicks, choices, forms) within the player",
+            "High frame rate video",
+            "Live stream"
+          ],
+          "correctAnswer": "Video allowing user inputs (clicks, choices, forms) within the player",
+          "explanation": "Interactive video allows viewers to engage directly with the video content through hotspots, quizzes, forms, or branching storylines."
+        },
+        {
+          "id": 355,
+          "type": "MCQ",
+          "question": "What is 'ACR' in Connected TV?",
+          "options": [
+            "All Channel Reach",
+            "Automatic Content Recognition",
+            "Audience Control Rating",
+            "Advanced Cable Reporting"
+          ],
+          "correctAnswer": "Automatic Content Recognition",
+          "explanation": "ACR technology identifies content playing on a smart TV (shows, ads) by analyzing audio or video fingerprints, enabling targeting."
+        },
+        {
+          "id": 356,
+          "type": "MCQ",
+          "question": "What is a 'Cinema Graph' ad?",
+          "options": [
+            "Movie trailer",
+            "Static image with subtle motion loop",
+            "Full motion video",
+            "3D animation"
+          ],
+          "correctAnswer": "Static image with subtle motion loop",
+          "explanation": "A cinemagraph is a still photograph in which a minor and repeated movement occurs to catch the eye, blending photo and video properties."
+        },
+        {
+          "id": 357,
+          "type": "MCQ",
+          "question": "What is 'Haptic Ads'?",
+          "options": [
+            "Ads with sound",
+            "Ads that use device vibration/tactile feedback",
+            "Visual illusions",
+            "Gesture control"
+          ],
+          "correctAnswer": "Ads that use device vibration/tactile feedback",
+          "explanation": "Haptic ads use the vibration motor in mobile devices to provide tactile feedback (vibrations) synchronized with visual or audio ad elements."
+        },
+        {
+          "id": 358,
+          "type": "MCQ",
+          "question": "What is a 'Masthead' ad?",
+          "options": [
+            "Ad in the footer",
+            "Premium placement at the top of a homepage (e.g., YouTube)",
+            "Sidebar ad",
+            "Email header"
+          ],
+          "correctAnswer": "Premium placement at the top of a homepage (e.g., YouTube)",
+          "explanation": "A Masthead is a prime, highly visible ad unit placed at the very top of a homepage, famously used on YouTube for high-impact campaigns."
+        },
+        {
+          "id": 359,
+          "type": "MCQ",
+          "question": "What defines 'User Generated Content' (UGC) ads?",
+          "options": [
+            "Professional studio ads",
+            "Ads creating using content made by consumers",
+            "AI generated ads",
+            "Publisher created content"
+          ],
+          "correctAnswer": "Ads creating using content made by consumers",
+          "explanation": "UGC ads leverage photos, videos, or reviews created by actual customers, often feeling more authentic and trustworthy than polished brand assets."
+        },
+        {
+          "id": 360,
+          "type": "MCQ",
+          "question": "What is 'In-Game Advertising'?",
+          "options": [
+            "Ads on game boxes",
+            "Ads integrated directly into video game environments",
+            "Popups during loading",
+            "Esports sponsorship"
+          ],
+          "correctAnswer": "Ads integrated directly into video game environments",
+          "explanation": "In-game advertising places ads realistically within the 3D game world, such as billboards in a racing game or jerseys in a sports game."
+        },
+        {
+          "id": 361,
+          "type": "MCQ",
+          "question": "What is a 'Carousel Ad'?",
+          "options": [
+            "Circular logo",
+            "Ad format with multiple swipable cards/images",
+            "Spinning animation",
+            "Rotating banner"
+          ],
+          "correctAnswer": "Ad format with multiple swipable cards/images",
+          "explanation": "Carousel ads allow advertisers to showcase multiple images or products in a single ad unit that users can swipe or click through horizontally."
+        },
+        {
+          "id": 362,
+          "type": "MCQ",
+          "question": "What is 'Vertical Video'?",
+          "options": [
+            "Video shot in landscape",
+            "Video optimized for mobile portrait mode (9:16)",
+            "Upside down video",
+            "Video specifically for TV"
+          ],
+          "correctAnswer": "Video optimized for mobile portrait mode (9:16)",
+          "explanation": "Vertical video is created in a 9:16 aspect ratio to fill the entire screen on mobile devices without requiring the user to rotate their phone."
+        },
+        {
+          "id": 363,
+          "type": "MCQ",
+          "question": "What is 'Listen-Through Rate' (LTR)?",
+          "options": [
+            "Click rate on audio",
+            "Percentage of an audio ad listened to completion",
+            "Volume level",
+            "Number of listeners"
+          ],
+          "correctAnswer": "Percentage of an audio ad listened to completion",
+          "explanation": "LTR measures the percentage of an audio advertisement that was played through to the end, similar to completion rate in video."
+        },
+        {
+          "id": 364,
+          "type": "MCQ",
+          "question": "What is '360-Degree Video Ad'?",
+          "options": [
+            "Looping video",
+            "Video where viewer controls angle/perspective",
+            "Surround sound audio",
+            "Circle shaped video"
+          ],
+          "correctAnswer": "Video where viewer controls angle/perspective",
+          "explanation": "360-degree video ads allow viewers to look around in every direction within the video player, creating an immersive experience."
+        },
+        {
+          "id": 365,
+          "type": "MCQ",
+          "question": "What is 'Augmented Reality (AR) Ad'?",
+          "options": [
+            "VR headset ad",
+            "Ad overlaying digital elements on the real world via camera",
+            "Cartoon ad",
+            "Futuristic design"
+          ],
+          "correctAnswer": "Ad overlaying digital elements on the real world via camera",
+          "explanation": "AR ads allow users to visualize products in their real environment (e.g., trying on sunglasses) using their device's camera."
+        },
+        {
+          "id": 366,
+          "type": "MCQ",
+          "question": "What is 'Sequential Messaging'?",
+          "options": [
+            "Sending emails daily",
+            "Showing a series of ads in a specific order to a user",
+            "Repeating the same slogan",
+            "Alphabetical ad list"
+          ],
+          "correctAnswer": "Showing a series of ads in a specific order to a user",
+          "explanation": "Sequential messaging tells a story by showing a user a specific sequence of ads (Part 1, then Part 2, then Part 3) over time."
+        },
+        {
+          "id": 367,
+          "type": "MCQ",
+          "question": "What is 'Dynamic Overlay'?",
+          "options": [
+            "Moving background",
+            "Adding personalized text/graphics over existing video/image",
+            "Heavy makeup",
+            "Pop-up blocker"
+          ],
+          "correctAnswer": "Adding personalized text/graphics over existing video/image",
+          "explanation": "Dynamic overlays add real-time, personalized information (like local store address or pricing) on top of a base video or image creative."
+        },
+        {
+          "id": 368,
+          "type": "MCQ",
+          "question": "What is 'Sponsoring' a section?",
+          "options": [
+            "Buying all ads",
+            "Paying to have 'Presented by' branding on specific content property",
+            "Donating to charity",
+            "Subscribing to newsletter"
+          ],
+          "correctAnswer": "Paying to have 'Presented by' branding on specific content property",
+          "explanation": "Sponsorship involves an advertiser paying for exclusive association with specific content or a site section, often indicated by 'Presented By' branding."
+        },
+        {
+          "id": 369,
+          "type": "MCQ",
+          "question": "What is 'Interstitial' on Mobile?",
+          "options": [
+            "Small banner",
+            "Full screen ad appearing between app screens",
+            "Notification icon",
+            "Loading bar"
+          ],
+          "correctAnswer": "Full screen ad appearing between app screens",
+          "explanation": "Mobile interstitials are full-screen ads that cover the interface of a host app, typically displayed at natural transition points like between game levels."
         }
       ]
     },
@@ -1806,6 +2066,331 @@
           ],
           "correctAnswer": "Automatically loading new ads without page reload",
           "explanation": "Ad refresh (or auto-refresh) automatically reloads new advertisements in the same placement after a set time interval without requiring a page reload."
+        },
+        {
+          "id": 450,
+          "type": "MCQ",
+          "question": "What is a 'Daisy Chain' in ad serving?",
+          "options": [
+            "Flower imagery",
+            "Another term for Waterfall model",
+            "Linked network cables",
+            "Blockchain ledger"
+          ],
+          "correctAnswer": "Another term for Waterfall model",
+          "explanation": "Daisy Chain is another term for the Waterfall model, describing the sequential passing of ad requests from one network to the next."
+        },
+        {
+          "id": 451,
+          "type": "MCQ",
+          "question": "What is an 'Ad Call'?",
+          "options": [
+            "Phone sales pitch",
+            "Request sent from browser to ad server for an ad",
+            "Naming an ad",
+            "Shouting about products"
+          ],
+          "correctAnswer": "Request sent from browser to ad server for an ad",
+          "explanation": "An ad call is the HTTP request sent from the user's browser (via the ad tag) to the ad server to fetch an advertisement to display."
+        },
+        {
+          "id": 452,
+          "type": "MCQ",
+          "question": "What is 'Creative Hosting'?",
+          "options": [
+            "Designing ads",
+            "Storing the actual image/video files on a server (CDN)",
+            "Hosting a party",
+            "Managing ad copy"
+          ],
+          "correctAnswer": "Storing the actual image/video files on a server (CDN)",
+          "explanation": "Creative hosting involves storing the physical ad assets (images, videos, HTML5) on a Content Delivery Network (CDN) for fast delivery to users."
+        },
+        {
+          "id": 453,
+          "type": "MCQ",
+          "question": "What is a 'Macro' in an ad tag?",
+          "options": [
+            "Big ad",
+            "Placeholder replaced by dynamic value by ad server",
+            "Spreadsheet function",
+            "Microscope setting"
+          ],
+          "correctAnswer": "Placeholder replaced by dynamic value by ad server",
+          "explanation": "A macro (e.g., %%CACHEBUSTER%%) is a placeholder in an ad tag that the ad server replaces with a real value (like a timestamp or ID) when serving the ad."
+        },
+        {
+          "id": 454,
+          "type": "MCQ",
+          "question": "What is a 'Cachebuster'?",
+          "options": [
+            "Browser cleaner",
+            "Random number added to URL to prevent browser caching",
+            "Money saving tool",
+            "Server reboot"
+          ],
+          "correctAnswer": "Random number added to URL to prevent browser caching",
+          "explanation": "A cachebuster is a unique string (usually a random number or timestamp) added to ad requests to ensure the browser fetches a fresh ad instead of a cached version."
+        },
+        {
+          "id": 455,
+          "type": "MCQ",
+          "question": "What is 'Verification Tag'?",
+          "options": [
+            "Security seal",
+            "Code from 3rd party to measure viewability/fraud",
+            "Checkout tag",
+            "HTML validator"
+          ],
+          "correctAnswer": "Code from 3rd party to measure viewability/fraud",
+          "explanation": "Verification tags (from vendors like IAS, DV) are wrapped around or included with the ad creative to independently measure viewability, brand safety, and fraud."
+        },
+        {
+          "id": 456,
+          "type": "MCQ",
+          "question": "What is 'Discrepancy' in ad tech?",
+          "options": [
+            "Consistent data",
+            "Difference in numbers reported by two different systems",
+            "Revenue profit",
+            "Server error"
+          ],
+          "correctAnswer": "Difference in numbers reported by two different systems",
+          "explanation": "Discrepancy refers to the variance in counted impressions or clicks between two systems (e.g., Publisher Ad Server vs Advertiser DSP), usually <10% is acceptable."
+        },
+        {
+          "id": 457,
+          "type": "MCQ",
+          "question": "What is 'Geofencing'?",
+          "options": [
+            "Building walls",
+            "Triggering ads when devices enter a specific GPS radius",
+            "Blocking countries",
+            "Fencing suppliers"
+          ],
+          "correctAnswer": "Triggering ads when devices enter a specific GPS radius",
+          "explanation": "Geofencing uses GPS technology to create a virtual geographic boundary, enabling software to trigger ads when a mobile device enters or leaves a particular area."
+        },
+        {
+          "id": 458,
+          "type": "MCQ",
+          "question": "What is 'Video Completion Rate' (VCR)?",
+          "options": [
+            "Number of videos made",
+            "Percentage of video ads played to the end",
+            "VCR tape repair",
+            "Video Cost Ratio"
+          ],
+          "correctAnswer": "Percentage of video ads played to the end",
+          "explanation": "VCR measures the percentage of viewable video impressions were played through to completion (100%), a key metric for branding campaigns."
+        },
+        {
+          "id": 459,
+          "type": "MCQ",
+          "question": "What is 'MRAID'?",
+          "options": [
+            "Mobile Rich Media Ad Interface Definitions",
+            "Market Research Aid",
+            "Multiple Raid Array",
+            "Mobile Reporting And ID"
+          ],
+          "correctAnswer": "Mobile Rich Media Ad Interface Definitions",
+          "explanation": "MRAID is an IAB API standard for mobile rich media ads that allows them to interact with the mobile app (e.g., expand, resize, access calendar)."
+        },
+        {
+          "id": 460,
+          "type": "MCQ",
+          "question": "What is 'SafeFrame'?",
+          "options": [
+            "Sturdy picture frame",
+            "Secure iframe allowing ad interaction without site access",
+            "Safety goggles",
+            "Firewall rule"
+          ],
+          "correctAnswer": "Secure iframe allowing ad interaction without site access",
+          "explanation": "SafeFrame is an IAB standard that provides a secure container (iframe) for ads, allowing rich interaction without giving the ad code full access to the publisher's page data."
+        },
+        {
+          "id": 461,
+          "type": "MCQ",
+          "question": "What is 'Fill Rate'?",
+          "options": [
+            "Gas tank level",
+            "Percentage of ad requests that result in a served ad",
+            "Inventory capacity",
+            "Data density"
+          ],
+          "correctAnswer": "Percentage of ad requests that result in a served ad",
+          "explanation": "Fill Rate is the ratio of ad impressions successfully served divided by the total number of ad requests received, expressed as a percentage."
+        },
+        {
+          "id": 462,
+          "type": "MCQ",
+          "question": "What is 'eCPM'?",
+          "options": [
+            "Electronic Cost Per Mile",
+            "Effective Cost Per Mille",
+            "Estimated Cost Per Month",
+            "Easy CPM"
+          ],
+          "correctAnswer": "Effective Cost Per Mille",
+          "explanation": "eCPM calculates the effective revenue earned per 1,000 impressions, allowing comparison of revenue across different pricing models (CPC, CPA, CPM)."
+        },
+        {
+          "id": 463,
+          "type": "MCQ",
+          "question": "What is 'Share of Voice' (SOV)?",
+          "options": [
+            "Loudness of ad",
+            "Percentage of total advertising exposure compared to competitors",
+            "Voice search ranking",
+            "Market cap"
+          ],
+          "correctAnswer": "Percentage of total advertising exposure compared to competitors",
+          "explanation": "Share of Voice represents the percentage of the total advertising inventory or market visibility that a specific brand owns compared to competitors."
+        },
+        {
+          "id": 464,
+          "type": "MCQ",
+          "question": "What is 'Ad Blocker'?",
+          "options": [
+            "Goalkeeper",
+            "Software that prevents ads from displaying",
+            "Physical barrier",
+            "Campaign stopper"
+          ],
+          "correctAnswer": "Software that prevents ads from displaying",
+          "explanation": "Ad blockers are software or browser extensions that identify and prevent advertising content from loading on webpages."
+        },
+        {
+          "id": 465,
+          "type": "MCQ",
+          "question": "What is 'Frequency Cap' level options?",
+          "options": [
+            "Only at campaign level",
+            "Campaign, Line Item, Creative, or Advertiser level",
+            "Only per day",
+            "Browser level only"
+          ],
+          "correctAnswer": "Campaign, Line Item, Creative, or Advertiser level",
+          "explanation": "Frequency caps can typically be set at multiple levels: per campaign, per specific line item, per creative, or across an entire advertiser's portfolio."
+        },
+        {
+          "id": 466,
+          "type": "MCQ",
+          "question": "What is 'Default Impression'?",
+          "options": [
+            "Standard view",
+            "Ad shown when no other paid ad is available",
+            "First impression",
+            "Blank space"
+          ],
+          "correctAnswer": "Ad shown when no other paid ad is available",
+          "explanation": "A default impression (or house ad/blank) is served when the ad server cannot find a paying ad that matches the targeting criteria."
+        },
+        {
+          "id": 467,
+          "type": "MCQ",
+          "question": "What is 'Roadblock'?",
+          "options": [
+            "Traffic jam",
+            "Owning 100% of ad slots on a page simultaneously",
+            "Blocked IP",
+            "Failed campaign"
+          ],
+          "correctAnswer": "Owning 100% of ad slots on a page simultaneously",
+          "explanation": "A Roadblock is a takeover where an advertiser buys all the ad placements on a single page at the same time to ensure exclusive visibility."
+        },
+        {
+          "id": 468,
+          "type": "MCQ",
+          "question": "What is 'Flight Dates'?",
+          "options": [
+            "Airline schedule",
+            "Start and end dates of an ad campaign",
+            "Travel ads",
+            "Reporting period"
+          ],
+          "correctAnswer": "Start and end dates of an ad campaign",
+          "explanation": "Flight dates refer to the specific date range during which an advertising campaign is active and running."
+        },
+        {
+          "id": 469,
+          "type": "MCQ",
+          "question": "What is 'Creative Rotation'?",
+          "options": [
+            "Spinning logo",
+            "Strategy for cycling through different ad versions",
+            "Changing agencies",
+            "Image editing"
+          ],
+          "correctAnswer": "Strategy for cycling through different ad versions",
+          "explanation": "Creative rotation determines the order or rules (e.g., even, weighted, optimized) for displaying different creative versions within a single ad placement."
+        },
+        {
+          "id": 470,
+          "type": "MCQ",
+          "question": "What is 'Conversion Window'?",
+          "options": [
+            "Time to complete purchase",
+            "Period after click/view where conversion is attributed",
+            "Browser popup",
+            "Store hours"
+          ],
+          "correctAnswer": "Period after click/view where conversion is attributed",
+          "explanation": "A conversion window is the specific timeframe after an ad interaction (click or view) during which a subsequent conversion will be credited to that ad."
+        },
+        {
+          "id": 471,
+          "type": "MCQ",
+          "question": "What is 'Click-Through Conversion'?",
+          "options": [
+            "Clicking twice",
+            "Conversion happening after user clicked an ad",
+            "Click bait",
+            " accidental click"
+          ],
+          "correctAnswer": "Conversion happening after user clicked an ad",
+          "explanation": "A click-through conversion is counted when a user directly clicks on an ad and then completes a conversion action within the lookback window."
+        },
+        {
+          "id": 472,
+          "type": "MCQ",
+          "question": "What is 'View-Through Conversion'?",
+          "options": [
+            "Watching a video purchase",
+            "Conversion after seeing ad but not clicking",
+            "Window shopping",
+            "X-ray vision"
+          ],
+          "correctAnswer": "Conversion after seeing ad but not clicking",
+          "explanation": "A view-through conversion is credited when a user sees an ad, does not click it, but later returns to the site to convert within the lookback window."
+        },
+        {
+          "id": 473,
+          "type": "MCQ",
+          "question": "What is 'Exclusion Targeting'?",
+          "options": [
+            "Targeting everyone",
+            "Preventing ads from showing to specific criteria",
+            "Exclusive deals",
+            "VIP list"
+          ],
+          "correctAnswer": "Preventing ads from showing to specific criteria",
+          "explanation": "Exclusion targeting (or negative targeting) ensures ads are NOT shown to specific audiences, contexts, or geographies (e.g., excluding current customers)."
+        },
+        {
+          "id": 474,
+          "type": "MCQ",
+          "question": "What is 'Inventory Quality'?",
+          "options": [
+            "Stock levels",
+            "Value/legitimacy of publisher ad space",
+            "Warehouse check",
+            "Product condition"
+          ],
+          "correctAnswer": "Value/legitimacy of publisher ad space",
+          "explanation": "Inventory quality assesses the caliber of the publisher's content, audience, and ad placements, ensuring they are fraud-free, viewable, and brand-safe."
         }
       ]
     },
@@ -2491,6 +3076,19 @@
           ],
           "correctAnswer": "Data a customer intentionally and proactively shares",
           "explanation": "Zero-party data is data that a customer intentionally and proactively shares with a brand, like preferences, purchase intentions, and personal context."
+        },
+        {
+          "id": 908,
+          "type": "MCQ",
+          "question": "What is 'PII'?",
+          "options": [
+            "Private Internet Interface",
+            "Personally Identifiable Information",
+            "Public Inventory Index",
+            "Past Interaction Indicator"
+          ],
+          "correctAnswer": "Personally Identifiable Information",
+          "explanation": "PII (Personally Identifiable Information) refers to any data that can distinguish or trace an individual's identity, such as name, email, or social security number."
         }
       ]
     },
@@ -2615,6 +3213,19 @@
           ],
           "correctAnswer": "The percentage of conversions that happened ONLY because of the ad",
           "explanation": "Incrementality measures the lift in desired outcomes (conversions) that occurred specifically as a result of the advertising campaign, excluding organic conversions."
+        },
+        {
+          "id": 1005,
+          "type": "MCQ",
+          "question": "What is 'Algorithmic Attribution'?",
+          "options": [
+            "Manual credit assignment",
+            "Using machine learning to dynamically assign credit to touchpoints",
+            "Random distribution",
+            "First click only"
+          ],
+          "correctAnswer": "Using machine learning to dynamically assign credit to touchpoints",
+          "explanation": "Algorithmic (or Data-Driven) attribution uses machine learning to analyze conversion paths and dynamically assign credit to touchpoints based on their actual statistical contribution."
         }
       ]
     },
