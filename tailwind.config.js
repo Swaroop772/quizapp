@@ -8,41 +8,54 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#f5f3ff', // Violet-50
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6', // Violet-500 (Primary)
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
+          50: '#fff7ed', // Orange-50
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316', // Orange-500 (Primary - Naruto)
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+          950: '#431407',
         },
         accent: {
-          400: '#22d3ee', // Cyan-400 (Secondary/Pop)
-          500: '#06b6d4',
-          600: '#0891b2',
+          400: '#38bdf8', // Sky-400 (Rasengan Blue)
+          500: '#0ea5e9',
+          600: '#0284c7',
         },
         dark: {
-          bg: '#0f172a',
-          surface: '#1e293b',
-          card: '#334155',
+          bg: '#0a0a0f', // Very dark ninja night
+          surface: '#11111b',
+          card: '#181825',
         }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
+        display: ['Bangers', 'cursive'], // Anime title font
+        ninja: ['Shojumaru', 'system-ui'], // Ninja Brush font
+        body: ['Saira', 'sans-serif'], // Energetic body font
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 8s ease-in-out infinite 2s',
+        'shuriken-spin': 'shuriken-spin 1s linear infinite',
+        'speed-lines': 'speed-lines 0.5s linear infinite',
+        'ninja-run': 'ninja-run 0.5s steps(4) infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'shuriken-spin': {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' }
+        },
+        'speed-lines': {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '100px 0' }
         }
       }
     },

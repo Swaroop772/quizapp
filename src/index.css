@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Shojumaru&family=Saira:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -107,4 +107,82 @@ h6 {
 
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
+}
+
+@keyframes falling-leaf {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-falling-leaf {
+  animation: falling-leaf linear infinite;
+}
+
+@keyframes run-across {
+  0% {
+    transform: translateX(-20vw) scaleX(1);
+    /* Start off-screen */
+  }
+
+  49% {
+    transform: translateX(120vw) scaleX(1);
+    /* Run across */
+  }
+
+  50% {
+    transform: translateX(120vw) scaleX(-1);
+    /* Flip at the end */
+  }
+
+  99% {
+    transform: translateX(-20vw) scaleX(-1);
+    /* Run back (optional) or just reset */
+  }
+
+  100% {
+    transform: translateX(-20vw) scaleX(1);
+    /* Reset flip */
+  }
+}
+
+@keyframes ninja-run-bob {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(25deg);
+  }
+}
+
+.animate-ninja-run {
+  animation: run-across 15s linear infinite;
+}
+
+.animate-ninja-bob {
+  animation: ninja-run-bob 0.4s infinite alternate ease-in-out;
+}
+
+/* Speed lines effect */
+@keyframes speed-lines-pan {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100px 0;
+  }
 }

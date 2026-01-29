@@ -56,12 +56,12 @@ export const ChapterSelection: React.FC<ChapterSelectionProps> = ({
                     transition={{ duration: 0.6 }}
                     className="text-center px-12"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-sm font-medium mb-4 animate-float">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 text-sm font-bold mb-4 animate-float uppercase tracking-wider font-ninja">
                         <Zap size={14} className="fill-brand-500 text-brand-500" />
-                        <span>Level Up Your Skills</span>
+                        <span>Chunin Exam Protocol</span>
                     </div>
-                    <h2 className="text-5xl md:text-7xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-200 to-accent-200 mb-6 drop-shadow-sm tracking-tight">
-                        Select a Module
+                    <h2 className="text-5xl md:text-7xl font-ninja font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-orange-500 to-red-500 mb-6 drop-shadow-sm tracking-tight stroke-white stroke-2" style={{ WebkitTextStroke: '1px white' }}>
+                        Select Mission
                     </h2>
                     <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
                         Master the complexities of the Ad Tech ecosystem one chapter at a time.
@@ -82,50 +82,54 @@ export const ChapterSelection: React.FC<ChapterSelectionProps> = ({
                     whileHover={{ y: -8, scale: 1.01 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => onSelectChapter('overall')}
-                    className="relative overflow-hidden group rounded-3xl p-1 cursor-pointer col-span-1 md:col-span-2 lg:col-span-3 transition-shadow duration-500 hover:shadow-2xl hover:shadow-purple-500/20"
+                    className="relative overflow-hidden group rounded-xl p-1 cursor-pointer col-span-1 md:col-span-2 lg:col-span-3 transition-shadow duration-500 hover:shadow-2xl hover:shadow-red-500/30"
                 >
-                    {/* Animated Gradient Border */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-indigo-500 opacity-60 blur-sm group-hover:blur-md transition-all duration-500" />
+                    {/* Scroll Rollers */}
+                    <div className="absolute top-0 left-2 right-2 h-4 bg-[#8b5a2b] rounded-full z-20 shadow-md" />
+                    <div className="absolute bottom-0 left-2 right-2 h-4 bg-[#8b5a2b] rounded-full z-20 shadow-md" />
 
-                    <div className="relative h-full bg-slate-900/90 backdrop-blur-xl rounded-[1.3rem] p-6 md:p-8 border border-white/10 flex flex-col md:flex-row items-center gap-8 overflow-hidden">
+                    <div className="relative h-full bg-[#fdfbf7] rounded-lg p-8 pt-10 pb-10 border-x-4 border-[#f4e4bc] shadow-inner flex flex-col md:flex-row items-center gap-8 overflow-hidden">
+                        {/* Paper Texture */}
+                        <div className="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none" />
+
                         {/* Background Effects */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
-                        <div className="flex-shrink-0 relative group-hover:scale-110 transition-transform duration-500 ease-in-out">
-                            <div className="absolute inset-0 bg-purple-500 blur-2xl opacity-40 animate-pulse-glow" />
-                            <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white shadow-2xl shadow-purple-500/30 border border-white/20">
+                        <div className="flex-shrink-0 relative group-hover:scale-110 transition-transform duration-500 ease-in-out z-10">
+                            <div className="absolute inset-0 bg-red-500 blur-2xl opacity-20 animate-pulse-glow" />
+                            <div className="relative w-24 h-24 rounded-full bg-slate-900 flex items-center justify-center text-red-500 border-4 border-red-500 shadow-xl">
                                 <Award size={40} className="animate-float" />
                             </div>
                         </div>
 
                         <div className="flex-1 text-center md:text-left z-10">
                             <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                                <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-200 text-xs font-bold border border-purple-500/30 uppercase tracking-wider">
-                                    Boss Level
+                                <span className="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-black border border-red-200 uppercase tracking-widest font-ninja">
+                                    S-Rank Mission
                                 </span>
                             </div>
-                            <h3 className="text-3xl font-display font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
-                                Comprehensive Final Exam
+                            <h3 className="text-3xl font-ninja font-bold text-slate-800 mb-3 group-hover:text-red-700 transition-colors">
+                                Hokage Qualification Exam
                             </h3>
-                            <p className="text-slate-300 text-lg font-light mb-6 md:pr-12">
-                                Prove your mastery across the entire ecosystem. <span className="text-white font-medium">50 random questions</span> from all 11 chapters.
+                            <p className="text-slate-600 text-lg font-medium mb-6 md:pr-12">
+                                Prove your mastery across the entire ecosystem. <span className="text-red-600 font-bold bg-red-50 px-1 rounded">50 random questions</span> from all villages.
                             </p>
 
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                                <div className="flex items-center gap-2 text-sm text-slate-400 bg-white/5 py-1.5 px-3 rounded-lg border border-white/5">
-                                    <BookOpen size={14} className="text-purple-400" />
-                                    <span>{totalAvailableQuestions} Questions Pool</span>
+                                <div className="flex items-center gap-2 text-sm text-slate-500 bg-black/5 py-1.5 px-3 rounded-lg border border-black/5 font-mono font-bold">
+                                    <BookOpen size={14} className="text-slate-700" />
+                                    <span>{totalAvailableQuestions} Jutsu Available</span>
                                 </div>
-                                <div className="flex items-center gap-2 text-sm text-slate-400 bg-white/5 py-1.5 px-3 rounded-lg border border-white/5">
-                                    <Zap size={14} className="text-yellow-400" />
+                                <div className="flex items-center gap-2 text-sm text-slate-500 bg-black/5 py-1.5 px-3 rounded-lg border border-black/5 font-mono font-bold">
+                                    <Zap size={14} className="text-yellow-600" />
                                     <span>Smart Shuffle</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className="flex-shrink-0 z-10">
-                            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-2xl shadow-lg shadow-purple-900/40 transition-all transform group-hover:scale-105 active:scale-95 flex items-center gap-3 border border-white/10">
-                                <span>Start Final Exam</span>
+                            <button className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider rounded-xl shadow-lg shadow-red-500/30 transition-all transform group-hover:scale-105 active:scale-95 flex items-center gap-3 border-2 border-red-800 font-ninja">
+                                <span>Start Exam</span>
                                 <div className="bg-white/20 rounded-full p-1">
                                     <Play size={16} fill="currentColor" />
                                 </div>
@@ -145,58 +149,60 @@ export const ChapterSelection: React.FC<ChapterSelectionProps> = ({
                             whileTap={{ scale: 0.98 }}
                             onClick={() => onSelectChapter(chapter.id)}
                             className={`
-                                relative group overflow-hidden rounded-3xl cursor-pointer transition-all duration-500
-                                bg-slate-800/50 backdrop-blur-xl border border-white/5
-                                hover:shadow-2xl hover:bg-slate-800/80
-                                ${isCompleted ? 'shadow-green-900/20' : 'shadow-black/20'}
+                                relative group overflow-hidden rounded-xl cursor-pointer transition-all duration-500
+                                bg-[#fdfbf7] border-x-4 border-[#f4e4bc] shadow-md
+                                hover:shadow-2xl hover:shadow-orange-500/10
                             `}
                         >
-                            {/* Hover Border Gradient */}
-                            <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-white/10 transition-colors pointer-events-none" />
-                            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            {/* Scroll Rollers */}
+                            <div className="absolute top-0 left-0 right-0 h-3 bg-[#8b5a2b] z-20" />
+                            <div className="absolute bottom-0 left-0 right-0 h-3 bg-[#8b5a2b] z-20" />
 
-                            <div className="p-6 md:p-8 flex flex-col h-full relative z-10">
+                            {/* Paper Texture */}
+                            <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none" />
+
+                            <div className="p-6 md:p-8 pt-10 pb-10 flex flex-col h-full relative z-10">
                                 <div className="flex justify-between items-start mb-6">
                                     <div className={`
-                                        w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3
+                                        w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-sm transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 border-2
                                         ${isCompleted
-                                            ? 'bg-gradient-to-br from-green-500 to-emerald-600 text-white shadow-green-500/30'
-                                            : 'bg-slate-700/50 text-slate-400 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-accent-500 group-hover:text-white group-hover:shadow-brand-500/30'
+                                            ? 'bg-green-100 text-green-700 border-green-300'
+                                            : 'bg-orange-100 text-orange-600 border-orange-200 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-600'
                                         }
                                     `}>
-                                        {isCompleted ? <Award size={28} className="animate-float" /> : (index + 1)}
+                                        {isCompleted ? <Award size={20} className="animate-float" /> : (index + 1)}
                                     </div>
 
                                     {isCompleted && (
-                                        <div className="bg-green-500/20 border border-green-500/30 text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide flex items-center gap-1">
+                                        <div className="bg-green-100 border border-green-200 text-green-700 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wide flex items-center gap-1">
                                             Completed <Award size={12} />
                                         </div>
                                     )}
                                 </div>
 
-                                <h3 className={`text-2xl font-display font-bold mb-3 transition-colors ${isCompleted ? 'text-green-400' : 'text-white group-hover:text-brand-300'}`}>
+                                <h3 className={`text-xl font-ninja font-bold mb-3 transition-colors ${isCompleted ? 'text-green-700' : 'text-slate-800 group-hover:text-orange-600'}`}>
                                     {chapter.title}
                                 </h3>
 
-                                <p className="text-slate-400 text-sm mb-8 leading-relaxed line-clamp-2 md:line-clamp-none group-hover:text-slate-300 transition-colors">
+                                <p className="text-slate-600 text-sm mb-8 leading-relaxed line-clamp-2 md:line-clamp-none group-hover:text-slate-800 transition-colors font-medium">
                                     {chapter.description}
                                 </p>
 
-                                <div className="mt-auto border-t border-white/5 pt-6 flex items-center justify-between">
+                                <div className="mt-auto border-t-2 border-dashed border-slate-200 pt-6 flex items-center justify-between">
                                     <div className="flex flex-col gap-1">
-                                        <span className="text-xs uppercase tracking-wider font-semibold text-slate-500 group-hover:text-slate-400 transition-colors">
-                                            Length
+                                        <span className="text-xs uppercase tracking-wider font-bold text-slate-400 group-hover:text-slate-500 transition-colors">
+                                            Mission Length
                                         </span>
-                                        <span className="text-sm font-medium text-slate-300">
-                                            10 Questions
+                                        <span className="text-sm font-bold text-slate-700 font-mono">
+                                            10 Jutsu
                                         </span>
                                     </div>
 
                                     <div className={`
                                         w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300
                                         ${isCompleted
-                                            ? 'bg-green-500/20 text-green-400'
-                                            : 'bg-white/5 text-slate-400 group-hover:bg-brand-500 group-hover:text-white'
+                                            ? 'bg-green-100 text-green-600'
+                                            : 'bg-slate-100 text-slate-400 group-hover:bg-orange-500 group-hover:text-white'
                                         }
                                     `}>
                                         {isCompleted
@@ -205,16 +211,6 @@ export const ChapterSelection: React.FC<ChapterSelectionProps> = ({
                                         }
                                     </div>
                                 </div>
-                            </div>
-
-                            {/* Progress Bar for styling */}
-                            <div className="absolute bottom-0 left-0 w-full h-1.5 bg-slate-900/50">
-                                <motion.div
-                                    className={`h-full ${isCompleted ? 'bg-gradient-to-r from-green-500 to-emerald-400' : 'bg-gradient-to-r from-brand-500 to-accent-500'}`}
-                                    initial={{ width: 0 }}
-                                    animate={{ width: isCompleted ? '100%' : '0%' }}
-                                    transition={{ duration: 1, delay: 0.5 }}
-                                />
                             </div>
                         </motion.div>
                     );
@@ -232,6 +228,6 @@ export const ChapterSelection: React.FC<ChapterSelectionProps> = ({
                     <span>Curriculum based on <span className="text-slate-200 font-medium">"The AdTech Book" (2025 Edition)</span></span>
                 </div>
             </motion.div>
-        </div>
+        </div >
     );
 };

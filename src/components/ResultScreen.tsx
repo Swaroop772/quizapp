@@ -81,23 +81,25 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 transition={{ type: "spring", stiffness: 200 }}
                 className="mb-8 relative inline-block"
             >
-                <div className="absolute inset-0 bg-accent-400/20 blur-3xl rounded-full" />
-                <Trophy className="w-32 h-32 text-accent-600 relative z-10 mx-auto drop-shadow-2xl" />
+                <div className="absolute inset-0 bg-orange-400/20 blur-3xl rounded-full" />
+                <div className="relative z-10 mx-auto drop-shadow-2xl bg-white p-4 rounded-full border-4 border-orange-500">
+                    <Trophy className="w-24 h-24 text-orange-500 fill-orange-100" />
+                </div>
                 {percentage === 100 && (
                     <>
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                            className="absolute -top-4 -right-4 text-amber-400"
+                            className="absolute -top-4 -right-4 text-yellow-400"
                         >
-                            <Star className="w-12 h-12 fill-current" />
+                            <Star className="w-12 h-12 fill-current drop-shadow-lg" />
                         </motion.div>
                         <motion.div
                             animate={{ rotate: -360 }}
                             transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                            className="absolute -bottom-2 -left-4 text-amber-400"
+                            className="absolute -bottom-2 -left-4 text-yellow-500"
                         >
-                            <Sparkles className="w-10 h-10 fill-current" />
+                            <Sparkles className="w-10 h-10 fill-current drop-shadow-lg" />
                         </motion.div>
                     </>
                 )}
@@ -107,7 +109,8 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-5xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-100 to-white mb-4 drop-shadow-sm"
+                className="text-5xl md:text-6xl font-ninja font-bold text-transparent bg-clip-text bg-gradient-to-b from-orange-500 to-red-600 mb-4 drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)] stroke-black"
+                style={{ WebkitTextStroke: '1px white' }}
             >
                 {userName ? `${userName}, ` : ''}{message}
             </motion.h1>
@@ -116,9 +119,9 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-slate-600 dark:text-slate-400 mb-2 text-lg"
+                className="text-slate-700 font-bold mb-2 text-xl font-mono bg-white/40 inline-block px-4 py-1 rounded-lg backdrop-blur-sm"
             >
-                You scored {score} out of {totalQuestions}
+                Mission Rank: {score} / {totalQuestions}
             </motion.p>
 
             {userRank && (
@@ -140,61 +143,79 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="bg-slate-900/40 backdrop-blur-xl rounded-2xl p-8 mb-8 border border-white/10 shadow-2xl"
+                className="bg-[#fdfbf7] rounded-xl p-8 mb-8 border-4 border-[#f4e4bc] shadow-xl relative overflow-hidden"
             >
-                <div className="flex justify-between items-end mb-2">
-                    <span className="text-slate-400 font-medium font-display">Accuracy</span>
-                    <span className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-accent-300">{percentage}%</span>
+                {/* Paper Texture Overlay */}
+                <div className="absolute inset-0 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none" />
+
+                <div className="flex justify-between items-end mb-2 relative z-10">
+                    <span className="text-slate-600 font-bold font-ninja uppercase tracking-widest text-lg">Chakra Control (Accuracy)</span>
+                    <span className="text-4xl font-ninja font-bold text-orange-600 drop-shadow-sm">{percentage}%</span>
                 </div>
-                <div className="w-full bg-slate-800/50 h-4 rounded-full overflow-hidden border border-white/5">
+                <div className="w-full bg-slate-200 h-6 rounded-full overflow-hidden border-2 border-slate-300 relative z-10">
                     <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${percentage}%` }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="bg-gradient-to-r from-brand-500 to-accent-500 h-full rounded-full shadow-[0_0_20px_rgba(34,211,238,0.3)]"
-                    />
+                        className="bg-gradient-to-r from-orange-400 to-red-500 h-full rounded-full shadow-inner flex items-center justify-end pr-2"
+                    >
+                        {/* Inner shine */}
+                        <div className="w-full h-1/2 bg-white/30 absolute top-0 left-0" />
+                    </motion.div>
                 </div>
             </motion.div>
 
+            {/* Detailed Breakdown */}
             {/* Detailed Breakdown */}
             {questions.length > 0 && (
                 <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="bg-white dark:bg-slate-800 rounded-2xl p-6 mb-8 border border-slate-200 dark:border-slate-700 shadow-lg text-left"
+                    className="bg-[#fdfbf7] rounded-xl p-0 mb-8 border-4 border-[#f4e4bc] shadow-xl text-left relative overflow-hidden"
                 >
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Detailed Breakdown</h3>
-                    <div className="space-y-4 max-h-96 overflow-y-auto">
-                        {questions.map((q, index) => {
-                            const userAnswer = userAnswers[index];
-                            const isCorrect = userAnswer === q.correctAnswer;
+                    {/* Scroll Rollers */}
+                    <div className="h-4 bg-[#8b5a2b] shadow-md relative z-20 border-b border-[#6d4521]" />
 
-                            return (
-                                <div key={q.id} className={`p-4 rounded-lg border-2 ${isCorrect ? 'border-green-300 bg-green-50 dark:bg-green-900/20' : 'border-red-300 bg-red-50 dark:bg-red-900/20'}`}>
-                                    <div className="flex items-start gap-3">
-                                        {isCorrect ? (
-                                            <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                                        ) : (
-                                            <X className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
-                                        )}
-                                        <div className="flex-1">
-                                            <p className="font-semibold text-slate-900 dark:text-white mb-1">Q{index + 1}: {q.question}</p>
-                                            <p className="text-sm text-slate-700 dark:text-slate-300">
-                                                <span className="font-medium">Your answer:</span> {userAnswer || 'No answer'}
-                                            </p>
-                                            {!isCorrect && (
-                                                <p className="text-sm text-green-700 dark:text-green-400 mt-1">
-                                                    <span className="font-medium">Correct answer:</span> {q.correctAnswer}
+                    {/* Paper Texture */}
+                    <div className="absolute inset-0 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none" />
+
+                    <div className="p-6 relative z-10">
+                        <h3 className="text-2xl font-ninja font-bold text-slate-800 mb-6 border-b-2 border-dashed border-slate-300 pb-2 text-center text-orange-700">Mission Report</h3>
+                        <div className="space-y-4 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+                            {questions.map((q, index) => {
+                                const userAnswer = userAnswers[index];
+                                const isCorrect = userAnswer === q.correctAnswer;
+
+                                return (
+                                    <div key={q.id} className={`p-4 rounded-lg border-2 transition-colors ${isCorrect ? 'border-green-400 bg-green-50/80 hover:bg-green-100' : 'border-red-400 bg-red-50/80 hover:bg-red-100'}`}>
+                                        <div className="flex items-start gap-3">
+                                            <div className={`mt-1 p-1 rounded-full ${isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}>
+                                                {isCorrect ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}
+                                            </div>
+                                            <div className="flex-1">
+                                                <p className="font-bold text-slate-900 mb-1 font-body text-lg">
+                                                    <span className="font-ninja text-slate-500 text-sm mr-2">JUTSU #{index + 1}</span>
+                                                    {q.question}
                                                 </p>
-                                            )}
-                                            <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 italic">{q.explanation}</p>
+                                                <p className="text-sm text-slate-700 font-medium bg-white/50 p-2 rounded inline-block mb-2">
+                                                    <span className="font-bold opacity-70">Your seal:</span> {userAnswer || 'No answer'}
+                                                </p>
+                                                {!isCorrect && (
+                                                    <div className="text-sm text-green-700 font-bold bg-green-100/50 p-2 rounded mb-2 border border-green-200">
+                                                        <span>Correct seal:</span> {q.correctAnswer}
+                                                    </div>
+                                                )}
+                                                <p className="text-sm text-slate-600 mt-2 italic border-t border-slate-200/50 pt-2">{q.explanation}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
+
+                    <div className="h-4 bg-[#8b5a2b] shadow-md relative z-20 border-t border-[#6d4521]" />
                 </motion.div>
             )}
 
@@ -206,22 +227,22 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
                     onClick={onRestart}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 dark:from-slate-700 dark:to-slate-600 text-white font-bold rounded-xl transition-all shadow-xl flex items-center justify-center gap-2 w-full md:w-auto"
+                    className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-ninja font-bold rounded-xl transition-all shadow-lg border-2 border-orange-800 flex items-center justify-center gap-2 w-full md:w-auto uppercase tracking-wide"
                 >
                     <RefreshCw size={20} />
-                    Restart Quiz
+                    Retry Mission
                 </motion.button>
 
                 <motion.button
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.9 }}
-                    onClick={() => window.location.reload()} // Simple reload to get back to start for now, or handle higher up
+                    onClick={() => window.location.reload()}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-2 border-slate-200 dark:border-slate-700 font-bold rounded-xl transition-all shadow-xl flex items-center justify-center gap-2 w-full md:w-auto hover:bg-slate-50 dark:hover:bg-slate-700"
+                    className="px-8 py-4 bg-[#fdfbf7] text-slate-700 border-2 border-[#d4c5a3] font-ninja font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-2 w-full md:w-auto hover:bg-white hover:border-orange-300 uppercase tracking-wide"
                 >
-                    Back to Menu
+                    Return to Village
                 </motion.button>
             </div>
         </div>
